@@ -21,7 +21,7 @@
         <!-- SidebarSearch Form -->
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Rechercher" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-sidebar">
                         <i class="fas fa-search fa-fw"></i>
@@ -35,7 +35,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                 <li class="nav-item">
-                    <a href="" class="nav-link active">
+                    <a  routerLink="/sg/dashboard" class="nav-link ">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Tableau de bord
@@ -54,15 +54,39 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/askpermission"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Demande permission</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/liskaskpermission" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste permission</p>
+                                <p>Liste  demande permission</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Sanction
+                            <i class="fas fa-angle-left right"></i>
+                            <span class="badge badge-info right">6</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a routerLink="/sg/recordsanction"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Enregistrer sanction</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/sg/listsanction" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Liste sanction</p>
                             </a>
                         </li>
                     </ul>
@@ -79,21 +103,21 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/recordabsent"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Enregistrer absence</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/justifyabsent"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Justifier absence</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/listabsent"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste absence</p>
+                                <p>liste absence</p>
                             </a>
                         </li>
                     </ul>
@@ -108,9 +132,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/stateofprogress" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>?.......</p>
+                                <p>Par classe</p>
                             </a>
                         </li>
                     </ul>
@@ -125,21 +149,63 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/allocatematerial"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Allouer materiel</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/listallocatematerial" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste materiel</p>
+                                <p> liste allocation materiel</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a routerLink="/sg/materialinventory"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Demande approvisionnement</p>
+                                <p>Inventaire</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Profil
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="" class="nav-link ">
+        
+                                <i class="nav-icon fa fa-solid fa-user"></i>
+                                <p>
+                                    Mon profil
+        
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/lockscreen" class="nav-link ">
+        
+                                <i class="nav-icon fa fa-solid fa-lock"></i>
+                                <p>
+                                    Bloquer ecran
+        
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link ">
+        
+                                <i class="nav-icon fa fa-solid fa-logout"></i>
+                                <p>
+                                    Déconnexion
+        
+                                </p>
                             </a>
                         </li>
 
@@ -147,42 +213,14 @@
                 </li>
 
 
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon  fa fa-user"></i>
-                        <p>
-                            Profil
-
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon fa fa-solid fa-lock"></i>
-                        <p>
-                            Bloquer ecran
-
-                        </p>
-                    </a>
-                </li>
+               
                 <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>Documentation</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon fa fa-solid fa-right-from-bracket"></i>
-                        <p>
-                            Déconnexion
-
-                        </p>
-                    </a>
-                </li>
+               
                
                 
             </ul>

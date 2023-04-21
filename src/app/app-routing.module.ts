@@ -5,8 +5,13 @@ import { routesTeacher } from './pages/teacher/teacher.routing.module';
 import { routesPrincipal } from './pages/principal/principal.routing.module';
 import { routesPrincipalVice } from './pages/principalVice/principalVice.routing.module';
 import { routesAdmin } from './pages/admin/admin.routing.module';
+import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
 
 const routes: Routes = [
+  {
+    path:"lockscreen",
+    component: LockScreenComponent
+  },
   {
     path:"sg",
     children :routesSG

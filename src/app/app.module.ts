@@ -16,6 +16,19 @@ import { PrincipalViceDashboardComponent } from './pages/principalVice/principal
 import { PrincipalViceSidebarComponent } from './pages/principalVice/principal-vice-sidebar/principal-vice-sidebar.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
 import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar.component';
+import { SgAskPermissionComponent } from './pages/sg/sg-ask-permission/sg-ask-permission.component';
+import { SgListAskPermissionComponent } from './pages/sg/sg-list-ask-permission/sg-list-ask-permission.component';
+import { SgListAbsentComponent } from './pages/sg/sg-list-absent/sg-list-absent.component';
+import { SgRecordAbsentComponent } from './pages/sg/sg-record-absent/sg-record-absent.component';
+import { SgJustifyAbsentComponent } from './pages/sg/sg-justify-absent/sg-justify-absent.component';
+import { SgRecordSanctionComponent } from './pages/sg/sg-record-sanction/sg-record-sanction.component';
+import { SgListSanctionComponent } from './pages/sg/sg-list-sanction/sg-list-sanction.component';
+import { SgStateOfProgressComponent } from './pages/sg/sg-state-of-progress/sg-state-of-progress.component';
+import { SgOverviewOfProgressComponent } from './pages/sg/sg-overview-of-progress/sg-overview-of-progress.component';
+import { SgAllocateMaterialComponent } from './pages/sg/sg-allocate-material/sg-allocate-material.component';
+import { SgListAllocateMaterialComponent } from './pages/sg/sg-list-allocate-material/sg-list-allocate-material.component';
+import { SgMaterialInventoryComponent } from './pages/sg/sg-material-inventory/sg-material-inventory.component';
+import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +37,7 @@ import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar
     MainHeaderComponent,
     FooterComponent,
     SgSidebarComponent,
+    SgAskPermissionComponent,
     TeacherSidebarComponent,
     TeacherDashboardComponent,
     PrincipalSidebarComponent,
@@ -31,7 +45,19 @@ import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar
     PrincipalViceDashboardComponent,
     PrincipalViceSidebarComponent,
     AdminDashboardComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    SgListAskPermissionComponent,
+    SgListAbsentComponent,
+    SgRecordAbsentComponent,
+    SgJustifyAbsentComponent,
+    SgRecordSanctionComponent,
+    SgListSanctionComponent,
+    SgStateOfProgressComponent,
+    SgOverviewOfProgressComponent,
+    SgAllocateMaterialComponent,
+    SgListAllocateMaterialComponent,
+    SgMaterialInventoryComponent,
+    LockScreenComponent
   ],
   imports: [
     BrowserModule,
