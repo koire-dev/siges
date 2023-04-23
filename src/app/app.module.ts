@@ -29,6 +29,16 @@ import { SgAllocateMaterialComponent } from './pages/sg/sg-allocate-material/sg-
 import { SgListAllocateMaterialComponent } from './pages/sg/sg-list-allocate-material/sg-list-allocate-material.component';
 import { SgMaterialInventoryComponent } from './pages/sg/sg-material-inventory/sg-material-inventory.component';
 import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
+import { AdminAnneeAcademiqueComponent } from './pages/admin/admin-annee-academique/admin-annee-academique.component';
+import { AdminCycleComponent } from './pages/admin/admin-cycle/admin-cycle.component';
+import { AdminFraisScolariteComponent } from './pages/admin/admin-frais-scolarite/admin-frais-scolarite.component';
+import { AdminMatiereComponent } from './pages/admin/admin-matiere/admin-matiere.component';
+import { AdminSalleClasseComponent } from './pages/admin/admin-salle-classe/admin-salle-classe.component';
+import { AdminTypeAbsenceComponent } from './pages/admin/admin-type-absence/admin-type-absence.component';
+import { AdminTypePermissionComponent } from './pages/admin/admin-type-permission/admin-type-permission.component';
+import { AdminTypePersonnelComponent } from './pages/admin/admin-type-personnel/admin-type-personnel.component';
+import { AdminTypeSanctionComponent } from './pages/admin/admin-type-sanction/admin-type-sanction.component';
+import { AdminSerieComponent } from './pages/admin/admin-serie/admin-serie.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +67,18 @@ import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.comp
     SgAllocateMaterialComponent,
     SgListAllocateMaterialComponent,
     SgMaterialInventoryComponent,
-    LockScreenComponent
+    LockScreenComponent,
+
+    AdminAnneeAcademiqueComponent,
+    AdminCycleComponent,
+    AdminFraisScolariteComponent,
+    AdminMatiereComponent,
+    AdminSalleClasseComponent,
+    AdminTypeAbsenceComponent,
+    AdminTypePermissionComponent,
+    AdminTypePersonnelComponent,
+    AdminTypeSanctionComponent,
+    AdminSerieComponent
   ],
   imports: [
     BrowserModule,
