@@ -13,6 +13,7 @@ import { SgOverviewOfProgressComponent } from './sg-overview-of-progress/sg-over
 import { SgAllocateMaterialComponent } from './sg-allocate-material/sg-allocate-material.component';
 import { SgListAllocateMaterialComponent } from './sg-list-allocate-material/sg-list-allocate-material.component';
 import { SgMaterialInventoryComponent } from './sg-material-inventory/sg-material-inventory.component';
+import { SgProfileComponent } from './sg-profile/sg-profile.component';
 
 export const routesSG: Routes = [
   {
@@ -59,6 +60,9 @@ export const routesSG: Routes = [
   },
   {
     path:"materialinventory", component : SgMaterialInventoryComponent
+  },
+  {
+    path:"profile", component : SgProfileComponent
   }
 ];
 

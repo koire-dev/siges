@@ -11,6 +11,11 @@ import { AdminTypePermissionComponent } from './admin-type-permission/admin-type
 import { AdminTypePersonnelComponent } from './admin-type-personnel/admin-type-personnel.component';
 import { AdminTypeSanctionComponent } from './admin-type-sanction/admin-type-sanction.component';
 import { AdminSerieComponent } from './admin-serie/admin-serie.component';
+import { AdminAccountManagerComponent } from './admin-account-manager/admin-account-manager.component';
+import { AdminCreateAccountComponent } from './admin-create-account/admin-create-account.component';
+import { AdminHistoriqueConnexionComponent } from './admin-historique-connexion/admin-historique-connexion.component';
+import { AdminHistoriqueOperationComponent } from './admin-historique-operation/admin-historique-operation.component';
+
 export const routesAdmin: Routes = [
   {
     path:"dashboard",
@@ -45,6 +50,18 @@ export const routesAdmin: Routes = [
   },
   {
     path:"serie",component : AdminSerieComponent
+  },
+  {
+    path:"accountmanager",component : AdminAccountManagerComponent
+  },
+  {
+    path:"createaccount",component : AdminCreateAccountComponent
+  },
+  {
+    path:"historicconnexion",component : AdminHistoriqueConnexionComponent
+  },
+  {
+    path:"historicoperation",component : AdminHistoriqueOperationComponent
   }
 ];
 

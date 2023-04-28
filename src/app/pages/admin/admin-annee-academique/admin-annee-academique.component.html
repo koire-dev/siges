@@ -47,18 +47,54 @@
                                     <thead>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Debut</th>
+                                            <th>Fin</th>
+                                            <th>Annee</th>
                                             <th>Statut</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr *ngFor="let annee of annees" id="{{annee.id}}">
+                                            <td></td>
+                                            <td>{{annee.debut}}</td>
+                                            <td>{{annee.fin}}</td>
+                                            <td>{{annee.annee}}</td>
+                                            <td>
+                                                <span *ngIf="annee.statut=='active';else elseBlock">
+                                                    <span class="text-success">{{annee.statut}}</span>
+                                                </span>
+                                                <ng-template #elseBlock>
+                                                    <span class="">{{annee.statut}}</span>
+                                                  </ng-template>
+                                             
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Action</button>
+                                                    <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                                      <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+                                                      <a class="dropdown-item" href="#">Activer </a>
+                                                      <div class="dropdown-divider"></div>
+
+                                                      <a class="dropdown-item" href="#">Desactiver</a>
+                                                    
+
+                                                    </div>
+                                                  </div>
+                                              
+                                            </td>
+                                        </tr>
                                         
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Debut</th>
+                                            <th>Fin</th>
+                                            <th>Annee</th>
                                             <th>Statut</th>
                                             <th>Action</th>
                                         </tr>

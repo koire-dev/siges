@@ -39,6 +39,12 @@ import { AdminTypePermissionComponent } from './pages/admin/admin-type-permissio
 import { AdminTypePersonnelComponent } from './pages/admin/admin-type-personnel/admin-type-personnel.component';
 import { AdminTypeSanctionComponent } from './pages/admin/admin-type-sanction/admin-type-sanction.component';
 import { AdminSerieComponent } from './pages/admin/admin-serie/admin-serie.component';
+import { ProfileComponent } from './pages/common/profile/profile.component';
+import { SgProfileComponent } from './pages/sg/sg-profile/sg-profile.component';
+import { AdminAccountManagerComponent } from './pages/admin/admin-account-manager/admin-account-manager.component';
+import { AdminCreateAccountComponent } from './pages/admin/admin-create-account/admin-create-account.component';
+import { AdminHistoriqueConnexionComponent } from './pages/admin/admin-historique-connexion/admin-historique-connexion.component';
+import { AdminHistoriqueOperationComponent } from './pages/admin/admin-historique-operation/admin-historique-operation.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +73,7 @@ import { AdminSerieComponent } from './pages/admin/admin-serie/admin-serie.compo
     SgAllocateMaterialComponent,
     SgListAllocateMaterialComponent,
     SgMaterialInventoryComponent,
+    SgProfileComponent,
     LockScreenComponent,
 
     AdminAnneeAcademiqueComponent,
@@ -78,7 +85,12 @@ import { AdminSerieComponent } from './pages/admin/admin-serie/admin-serie.compo
     AdminTypePermissionComponent,
     AdminTypePersonnelComponent,
     AdminTypeSanctionComponent,
-    AdminSerieComponent
+    AdminSerieComponent,
+    AdminAccountManagerComponent,
+    AdminCreateAccountComponent,
+    AdminHistoriqueConnexionComponent,
+    AdminHistoriqueOperationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

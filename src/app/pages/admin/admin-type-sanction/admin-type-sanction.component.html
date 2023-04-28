@@ -48,18 +48,35 @@
                                         <tr>
                                             <th>N</th>
                                             <th>Labelle</th>
-                                            <th>Statut</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+                                        <tr *ngFor="let sanction of sanctions" id="{{sanction.id}}">
+                                            <td></td>
+                                            <td>{{sanction.label}}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Action</button>
+                                                    <button type="button"
+                                                        class="btn btn-default dropdown-toggle dropdown-icon"
+                                                        data-toggle="dropdown">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a class="dropdown-item" href="#">Editer </a>
+                                                        <a class="dropdown-item" href="#">Supprimer</a>
+
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
                                             <th>Labelle</th>
-                                            <th>Statut</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
