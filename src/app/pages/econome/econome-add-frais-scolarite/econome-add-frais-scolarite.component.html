@@ -1,0 +1,88 @@
+<div class="wrapper">
+  <!-- Main  header -->
+  <app-main-header2></app-main-header2>
+
+  <!--  Layout Primary  -->
+  <div id="layoutDrawer">
+    <!--  Sidebar Container -->
+    <app-econome-sidebar></app-econome-sidebar>
+
+    <!--
+        =============================================
+        Main section layout
+        ==============================================
+    -->
+    <div id="layoutDrawer_content">
+      <!-- Main page content-->
+      <main>
+        <!-- Page header-->
+        <header class="" style="background-color: #6e83d3;">
+          <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Enregistrer les frais de scolarite </h1></div>
+        </header>
+        <div class="row g-0">
+          <div class="col-lg-5 col-md-6">
+            <div class="card-body p-5">
+
+              <!-- Login submission form-->
+              <form class="mb-5" method="post">
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label for="name">Matricule de l'eleve</label>
+                    <input type="text" name="name_event" class="form-control" id="name" aria-describedby="name" placeholder="Matricule">
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label >Type de paiement</label>
+                    <select name="" class="form-control">
+                      <option value="">Selectionner un type de paiement</option>
+                      <option value="1ere Tranche"></option>
+                      <option value="2nd Tranche"></option>
+                      <option value="Tout"></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="form-group ">
+                    <label >Classe ?</label>
+                    <select name=""  class="form-control">
+                      <option value="">Selectionner la classe requise</option>
+                      <option value="Extrascolaire"></option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label for="date">Date et Heure </label>
+                    <input type="datetime-local" class="form-control" id="date"  placeholder="Date of event">
+                  </div>
+                </div>
+
+              </form>
+              <!-- Auth card message-->
+              <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                <a class="btn btn-primary mdc-ripple-upgraded" href="index.html">Enregistrer</a>
+              </div>
+            </div>
+
+          </div>
+          <!-- Background image column using inline CSS-->
+          <div class="col-lg-7 col-md-6 d-none d-md-block">
+            <div class="card card-raised">
+              <div class="card-body text-center p-5">
+                <img class="img-fluid mb-5" src="../../../../assets/img/images/college.webp" alt="image" style="max-width: 20rem">
+                <div class="display-6">Payer ses frais de scolarité est desormais chose facile.</div>
+                <p class="card-text">Grace SIGES, tout se fait en click !</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer content-->
+      <app-footer></app-footer>
+    </div>
+  </div>
+
+</div>
