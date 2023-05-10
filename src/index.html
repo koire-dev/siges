@@ -60,6 +60,16 @@
   </script>
   <script>
     $(function () {
+
+  //  Modal form
+      $('#exampleModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })
+  //Modal form Edit
+      // $('#exampleModalEdit').on('shown.bs.modal', function () {
+      //   $('#myInput').trigger('focus')
+      // })
+
       // Summernote
       $('#summernote').summernote()
 

@@ -8,6 +8,7 @@ import { routesAdmin } from './pages/admin/admin.routing.module';
 import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
 import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-notes.component';
 import { TeacherDashboardComponent } from './pages/teacher/teacher-dashboard/teacher-dashboard.component';
+import { TeacherAddNotesComponent } from './pages/teacher/teacher-add-notes/teacher-add-notes.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path:"notes",
     component:TeacherNotesComponent
+  },
+  {
+    path: "addNote",
+    component: TeacherAddNotesComponent
   },
   {
     path:"dashTeach",

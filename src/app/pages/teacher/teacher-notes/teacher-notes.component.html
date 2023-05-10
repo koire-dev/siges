@@ -34,7 +34,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title"></h3>
-                            <button class="btn btn-success col-1" style="margin-left: 91%;">Ajouter</button>
+                            <button class="btn btn-success col-1" style="margin-left: 91%;" data-toggle="modal" data-target="#exampleModal">Ajouter</button>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -132,7 +132,66 @@
             </div>
             <!-- /.row -->
         </div>
+    
+     
         <!-- /.container-fluid -->
     </section>
+
+    <!-- Modal form -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Formulaire d'ajout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="matricule">Matricule</label>
+                          <select name="" class="form-control" id="">
+                            <option value="">17Y196P</option>
+                            <option value="">17Y190P</option>
+                            <option value="">17Y192P</option>
+                            <option value="">17Y194P</option>
+                          </select>
+                          <!-- <input type="text" class="form-control" id="matricule" placeholder="Entrer le matricule"> -->
+                        </div>
+                        <div class="form-group">
+                          <label for="matiere">Matiere</label>
+                          <select name="" class="form-control" id="">
+                            <option value="">Mathematiques</option>
+                            <option value="">Physique</option>
+                            <option value="">Chimie</option>
+                            <option value="">Informatique</option>
+                            <option value="">Litterature</option>
+                            <option value="">Philosophie</option>
+                          </select>
+                          <!-- <input type="text" class="form-control" id="matiere" placeholder="Matiere"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="note">note</label>
+                            <input type="number" class="form-control" id="note" placeholder="Note">
+                          </div>
+                        <!-- <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div> -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+   </div>
+
 <app-footer></app-footer>
 </div>
+
+
+
