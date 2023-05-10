@@ -16,7 +16,44 @@ import { PrincipalViceDashboardComponent } from './pages/principalVice/principal
 import { PrincipalViceSidebarComponent } from './pages/principalVice/principal-vice-sidebar/principal-vice-sidebar.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
 import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar.component';
-
+import { SgAskPermissionComponent } from './pages/sg/sg-ask-permission/sg-ask-permission.component';
+import { SgListAskPermissionComponent } from './pages/sg/sg-list-ask-permission/sg-list-ask-permission.component';
+import { SgListAbsentComponent } from './pages/sg/sg-list-absent/sg-list-absent.component';
+import { SgRecordAbsentComponent } from './pages/sg/sg-record-absent/sg-record-absent.component';
+import { SgJustifyAbsentComponent } from './pages/sg/sg-justify-absent/sg-justify-absent.component';
+import { SgRecordSanctionComponent } from './pages/sg/sg-record-sanction/sg-record-sanction.component';
+import { SgListSanctionComponent } from './pages/sg/sg-list-sanction/sg-list-sanction.component';
+import { SgStateOfProgressComponent } from './pages/sg/sg-state-of-progress/sg-state-of-progress.component';
+import { SgOverviewOfProgressComponent } from './pages/sg/sg-overview-of-progress/sg-overview-of-progress.component';
+import { SgAllocateMaterialComponent } from './pages/sg/sg-allocate-material/sg-allocate-material.component';
+import { SgListAllocateMaterialComponent } from './pages/sg/sg-list-allocate-material/sg-list-allocate-material.component';
+import { SgMaterialInventoryComponent } from './pages/sg/sg-material-inventory/sg-material-inventory.component';
+import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
+import { AdminAnneeAcademiqueComponent } from './pages/admin/admin-annee-academique/admin-annee-academique.component';
+import { AdminCycleComponent } from './pages/admin/admin-cycle/admin-cycle.component';
+import { AdminFraisScolariteComponent } from './pages/admin/admin-frais-scolarite/admin-frais-scolarite.component';
+import { AdminMatiereComponent } from './pages/admin/admin-matiere/admin-matiere.component';
+import { AdminSalleClasseComponent } from './pages/admin/admin-salle-classe/admin-salle-classe.component';
+import { AdminTypeAbsenceComponent } from './pages/admin/admin-type-absence/admin-type-absence.component';
+import { AdminTypePermissionComponent } from './pages/admin/admin-type-permission/admin-type-permission.component';
+import { AdminTypePersonnelComponent } from './pages/admin/admin-type-personnel/admin-type-personnel.component';
+import { AdminTypeSanctionComponent } from './pages/admin/admin-type-sanction/admin-type-sanction.component';
+import { AdminSerieComponent } from './pages/admin/admin-serie/admin-serie.component';
+import { ProfileComponent } from './pages/common/profile/profile.component';
+import { SgProfileComponent } from './pages/sg/sg-profile/sg-profile.component';
+import { AdminAccountManagerComponent } from './pages/admin/admin-account-manager/admin-account-manager.component';
+import { AdminCreateAccountComponent } from './pages/admin/admin-create-account/admin-create-account.component';
+import { AdminHistoriqueConnexionComponent } from './pages/admin/admin-historique-connexion/admin-historique-connexion.component';
+import { AdminHistoriqueOperationComponent } from './pages/admin/admin-historique-operation/admin-historique-operation.component';
+//region abdel
+import { EconomeDashboardComponent } from './pages/econome/econome-dashboard/econome-dashboard.component';
+import { EconomeSidebarComponent } from './pages/econome/econome-sidebar/econome-sidebar.component';
+import { EconomeAddFraisScolariteComponent } from './pages/econome/econome-add-frais-scolarite/econome-add-frais-scolarite.component';
+import { EconomeListFraisScolariteComponent } from './pages/econome/econome-list-frais-scolarite/econome-list-frais-scolarite.component';
+//common
+import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
+import { LoginComponent } from './pages/login/login.component';
+//end region
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +61,7 @@ import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar
     MainHeaderComponent,
     FooterComponent,
     SgSidebarComponent,
+    SgAskPermissionComponent,
     TeacherSidebarComponent,
     TeacherDashboardComponent,
     PrincipalSidebarComponent,
@@ -31,7 +69,45 @@ import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar
     PrincipalViceDashboardComponent,
     PrincipalViceSidebarComponent,
     AdminDashboardComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    SgListAskPermissionComponent,
+    SgListAbsentComponent,
+    SgRecordAbsentComponent,
+    SgJustifyAbsentComponent,
+    SgRecordSanctionComponent,
+    SgListSanctionComponent,
+    SgStateOfProgressComponent,
+    SgOverviewOfProgressComponent,
+    SgAllocateMaterialComponent,
+    SgListAllocateMaterialComponent,
+    SgMaterialInventoryComponent,
+    SgProfileComponent,
+    LockScreenComponent,
+
+    AdminAnneeAcademiqueComponent,
+    AdminCycleComponent,
+    AdminFraisScolariteComponent,
+    AdminMatiereComponent,
+    AdminSalleClasseComponent,
+    AdminTypeAbsenceComponent,
+    AdminTypePermissionComponent,
+    AdminTypePersonnelComponent,
+    AdminTypeSanctionComponent,
+    AdminSerieComponent,
+    AdminAccountManagerComponent,
+    AdminCreateAccountComponent,
+    AdminHistoriqueConnexionComponent,
+    AdminHistoriqueOperationComponent,
+    ProfileComponent,
+// Econome Part
+    EconomeDashboardComponent,
+    EconomeSidebarComponent,
+    EconomeAddFraisScolariteComponent,
+    EconomeListFraisScolariteComponent,
+    MainHeader2Component,
+
+//  Login
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
