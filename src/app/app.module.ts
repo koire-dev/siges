@@ -16,6 +16,9 @@ import { PrincipalViceDashboardComponent } from './pages/principalVice/principal
 import { PrincipalViceSidebarComponent } from './pages/principalVice/principal-vice-sidebar/principal-vice-sidebar.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
 import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar.component';
+import { TeacherStudynotesSequenceComponent } from './pages/teacher/teacher-studynotes-sequence/teacher-studynotes-sequence.component';
+import { TeacherStudynotesTrimestreComponent} from './pages/teacher/teacher-studynotes-trimestre/teacher-studynotes-trimestre.component';
+import { Studynotes02Component } from './pages/teacher/studynote/studynotes02/studynotes02.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar
     PrincipalViceDashboardComponent,
     PrincipalViceSidebarComponent,
     AdminDashboardComponent,
-    AdminSidebarComponent
+    TeacherStudynotesSequenceComponent,
+    TeacherStudynotesTrimestreComponent,
+    AdminSidebarComponent,
+    Studynotes02Component
   ],
   imports: [
     BrowserModule,

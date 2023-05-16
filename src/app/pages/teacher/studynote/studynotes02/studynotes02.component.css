@@ -1,0 +1,12 @@
+.center{text-align: center;border-radius: 20PX;}
+.left{text-align: left;}
+.right{text-align: right;}
+img{
+    height: 100px;
+    width: 100px;
+}
+.entete{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
