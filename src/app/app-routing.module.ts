@@ -5,17 +5,27 @@ import { routesTeacher } from './pages/teacher/teacher.routing.module';
 import { routesPrincipal } from './pages/principal/principal.routing.module';
 import { routesPrincipalVice } from './pages/principalVice/principalVice.routing.module';
 import { routesAdmin } from './pages/admin/admin.routing.module';
-//region abdel
-import { routesEconome } from './pages/econome/econome.routing.module';
-//end region
 import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
-import { LoginComponent } from './pages/login/login.component';
-
+import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-notes.component';
+import { TeacherDashboardComponent } from './pages/teacher/teacher-dashboard/teacher-dashboard.component';
+import { TeacherAddNotesComponent } from './pages/teacher/teacher-add-notes/teacher-add-notes.component';
 
 const routes: Routes = [
   {
     path:"lockscreen",
     component: LockScreenComponent
+  },
+  {
+    path:"notes",
+    component:TeacherNotesComponent
+  },
+  {
+    path: "addNote",
+    component: TeacherAddNotesComponent
+  },
+  {
+    path:"dashTeach",
+    component:TeacherDashboardComponent
   },
   {
     path:"sg",
@@ -37,22 +47,8 @@ const routes: Routes = [
     path:"admin",
     children :routesAdmin
   },
-//  Mabdel region
-  {
-    path:"econome",
-    children :routesEconome
-  },
-  {
-    path:"login",
-    component : LoginComponent
-  },
-
-
-//  end region
-
-
-
-
+  
+  
 ];
 
 @NgModule({

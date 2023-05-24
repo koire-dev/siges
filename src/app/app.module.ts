@@ -45,15 +45,8 @@ import { AdminAccountManagerComponent } from './pages/admin/admin-account-manage
 import { AdminCreateAccountComponent } from './pages/admin/admin-create-account/admin-create-account.component';
 import { AdminHistoriqueConnexionComponent } from './pages/admin/admin-historique-connexion/admin-historique-connexion.component';
 import { AdminHistoriqueOperationComponent } from './pages/admin/admin-historique-operation/admin-historique-operation.component';
-//region abdel
-import { EconomeDashboardComponent } from './pages/econome/econome-dashboard/econome-dashboard.component';
-import { EconomeSidebarComponent } from './pages/econome/econome-sidebar/econome-sidebar.component';
-import { EconomeAddFraisScolariteComponent } from './pages/econome/econome-add-frais-scolarite/econome-add-frais-scolarite.component';
-import { EconomeListFraisScolariteComponent } from './pages/econome/econome-list-frais-scolarite/econome-list-frais-scolarite.component';
-//common
-import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
-import { LoginComponent } from './pages/login/login.component';
-//end region
+import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-notes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +57,7 @@ import { LoginComponent } from './pages/login/login.component';
     SgAskPermissionComponent,
     TeacherSidebarComponent,
     TeacherDashboardComponent,
+    TeacherNotesComponent,
     PrincipalSidebarComponent,
     PrincipalDashboardComponent,
     PrincipalViceDashboardComponent,
@@ -98,16 +92,7 @@ import { LoginComponent } from './pages/login/login.component';
     AdminCreateAccountComponent,
     AdminHistoriqueConnexionComponent,
     AdminHistoriqueOperationComponent,
-    ProfileComponent,
-// Econome Part
-    EconomeDashboardComponent,
-    EconomeSidebarComponent,
-    EconomeAddFraisScolariteComponent,
-    EconomeListFraisScolariteComponent,
-    MainHeader2Component,
-
-//  Login
-    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
