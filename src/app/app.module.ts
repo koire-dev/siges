@@ -46,6 +46,11 @@ import { AdminCreateAccountComponent } from './pages/admin/admin-create-account/
 import { AdminHistoriqueConnexionComponent } from './pages/admin/admin-historique-connexion/admin-historique-connexion.component';
 import { AdminHistoriqueOperationComponent } from './pages/admin/admin-historique-operation/admin-historique-operation.component';
 import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-notes.component';
+import { EconomeAddFraisScolariteComponent } from './pages/econome/econome-add-frais-scolarite/econome-add-frais-scolarite.component';
+import { EconomeDashboardComponent } from './pages/econome/econome-dashboard/econome-dashboard.component';
+import { EconomeListFraisScolariteComponent } from './pages/econome/econome-list-frais-scolarite/econome-list-frais-scolarite.component';
+import { EconomeSidebarComponent } from './pages/econome/econome-sidebar/econome-sidebar.component';
+import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +97,14 @@ import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-not
     AdminCreateAccountComponent,
     AdminHistoriqueConnexionComponent,
     AdminHistoriqueOperationComponent,
-    ProfileComponent
+    ProfileComponent,
+
+    EconomeAddFraisScolariteComponent,
+    EconomeDashboardComponent,
+    EconomeListFraisScolariteComponent,
+    EconomeSidebarComponent,
+    EconomeSidebarComponent,
+    MainHeader2Component
   ],
   imports: [
     BrowserModule,

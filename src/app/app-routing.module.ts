@@ -9,27 +9,20 @@ import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.comp
 import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-notes.component';
 import { TeacherDashboardComponent } from './pages/teacher/teacher-dashboard/teacher-dashboard.component';
 import { TeacherAddNotesComponent } from './pages/teacher/teacher-add-notes/teacher-add-notes.component';
+import { routesEconome } from './pages/econome/econome.routing.module';
 
 const routes: Routes = [
   {
     path:"lockscreen",
     component: LockScreenComponent
-  },
-  {
-    path:"notes",
-    component:TeacherNotesComponent
-  },
-  {
-    path: "addNote",
-    component: TeacherAddNotesComponent
-  },
-  {
-    path:"dashTeach",
-    component:TeacherDashboardComponent
-  },
+  },  
   {
     path:"sg",
     children :routesSG
+  },
+  {
+    path:"econome",
+    children :routesEconome
   },
   {
     path:"teacher",
