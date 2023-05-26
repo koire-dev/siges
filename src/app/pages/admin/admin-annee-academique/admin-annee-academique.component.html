@@ -58,7 +58,7 @@
 
                                             <td>{{year.date_debut}}</td>
                                             <td>{{year.date_fin}}</td>
-                                            <td>{{year.date_debut}} - {{year.date_debut}}</td>
+                                            <td>{{year.date_debut}} - {{year.date_fin}}</td>
                     
                                             <td>
                                                 <span *ngIf="year.statut=='active';else elseBlock">
@@ -82,9 +82,9 @@
                                                             <div class="dropdown-divider"></div>
                                                       <a class="dropdown-item" href="#">Desactiver</a>
                                                              <div class="dropdown-divider"></div>
-                                                      <a class="dropdown-item "  (click) = "updateYear(year.id)" ><i class="fa fa-edit"></i>Modifier</a>
+                                                      <a style="cursor:pointer;" class="dropdown-item "   (click) = "updateYear(year.id)" ><i class="fa fa-edit"></i>Modifier</a>
                                                               <div class="dropdown-divider"></div>
-                                                      <!-- <a class="dropdown-item bg-danger" (click) = "deleteYear(year.id)" ><i class="fa fa-trash"></i>Supprimer</a> -->
+                                                      <a style="cursor:pointer;"  class="dropdown-item" (click) = "deleteYear(year.id)" ><i class="fa fa-trash"></i>Supprimer</a>
                                                     </div>
                                                   </div>
                                               

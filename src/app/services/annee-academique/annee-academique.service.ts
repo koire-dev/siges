@@ -12,9 +12,13 @@ export class AnneeAcademiqueService {
 // Connexion to spring project
   readonly API_URL = "http://localhost:8093"
 
-  readonly ENDPOINT_YEARS = "/findAllYears"
+  readonly FIND_ALLYEARS = "/findAllYears"
 
   readonly POST_YEAR = "/addYear"
+
+  readonly FIND_ONEYEAR = "/findOneYear"
+
+  readonly UPDATE_YEAR = "/updateYear"
 
   readonly DELETE_YEAR = "/deleteYear"
 
@@ -22,17 +26,28 @@ export class AnneeAcademiqueService {
 
   //Find All Years in mongo spring database
   getYears(){
-      return this.httpClient.get(this.API_URL+this.ENDPOINT_YEARS)
+      return this.httpClient.get(this.API_URL+this.FIND_ALLYEARS)
   }
+  
   //Save new Year in the database.
   addYear( annee: AnneeModel ) {
       return this.httpClient.post((this.API_URL+this.POST_YEAR), annee)
   }
 
-  //Delete  Year in the database.
-//  deleteYear( id: string ) {
-//     return this.httpClient.delete((this.API_URL+this.POST_YEAR+"/{id}"),)
-// }
+   //Get Year By Id in the database.
+   getYearById( id: string ):Observable <AnneeModel>{
+     return this.httpClient.get<AnneeModel>( `${this.API_URL+this.FIND_ONEYEAR}/${id}` )
+  }
+
+   //Update Year By Id in the database.
+   updateYear( id: string, annee: AnneeModel ) : Observable <Object>{
+       return this.httpClient.put<AnneeModel>(`${this.API_URL+this.UPDATE_YEAR}/${id}`,  annee)
+  }
+
+    //Delete  Year in the database.
+  deleteYear( id: string ):Observable <AnneeModel> {
+      return this.httpClient.delete<AnneeModel>( `${this.API_URL+this.DELETE_YEAR}/${id}` )
+  }
 
   
 }

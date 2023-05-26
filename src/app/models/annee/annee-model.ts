@@ -1,7 +1,7 @@
 
 export class AnneeModel {
     id: string | undefined ;
-    date_debut: string ='';
-    date_fin : string ='';
+    date_debut: any;
+    date_fin : any;
     statut : string='active';
 }

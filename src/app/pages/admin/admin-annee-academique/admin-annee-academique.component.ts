@@ -48,10 +48,16 @@ export class AdminAnneeAcademiqueComponent implements OnInit{
   }
   
   //  //delete Year
-  //  deleteYear(id: string)
-  //  {
-  //    this.router.navigate(['/admin/edit_academicyear', id])
-  //  }
+   deleteYear(id: string)
+   {
+      this.anneeService.deleteYear(id).subscribe(
+        (datas) =>{
+            console.log(datas);
+            this.ngOnInit();
+        },
+        error => console.log(error)
+        )
+   }
  
  
 
