@@ -15,6 +15,8 @@ import { AdminAccountManagerComponent } from './admin-account-manager/admin-acco
 import { AdminCreateAccountComponent } from './admin-create-account/admin-create-account.component';
 import { AdminHistoriqueConnexionComponent } from './admin-historique-connexion/admin-historique-connexion.component';
 import { AdminHistoriqueOperationComponent } from './admin-historique-operation/admin-historique-operation.component';
+import { AdminEditAnneeAcademiqueComponent } from './admin-edit-annee-academique/admin-edit-annee-academique.component';
+
 
 export const routesAdmin: Routes = [
   {
@@ -23,6 +25,9 @@ export const routesAdmin: Routes = [
   },
   {
     path:"academicyear",component : AdminAnneeAcademiqueComponent
+  },
+  {
+    path:"edit_academicyear/:id",component : AdminEditAnneeAcademiqueComponent
   },
   {
     path:"cycle",component : AdminCycleComponent

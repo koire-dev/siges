@@ -47,7 +47,6 @@ const routes: Routes = [
     component : LoginComponent
   },
 
-
 //  end region
 
 

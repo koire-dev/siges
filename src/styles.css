@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+
+.false
+{  font-size: 30px;
+}
+.false:hover
+{
+  background-color: red;
+  color: white;
+}
+.modal-header
+{
+  background-color:#d7dbdf;
+}
+a
+{
+    text-decoration: none;
+}
+.mod
+{
+  width: 45%;
+}
+.texte
+{
+  font-size: 20px;
+}
+.card-title
+{
+  font-size: 25px;
+}
+.btne
+{
+  color: #fff;
+  font-size: 13px;
+  float: right;
+}
+.fc .fc-daygrid-day.fc-day-today 
+{
+      background-color: #ffc107;
+}
+.fc-daygrid-dot-event,
+  .fc-daygrid-dot-event.fc-event-mirror {
+    background: yellow;
+    font-weight: bold;
+    height: 50px;
+  }
+/* --- the dot style of event --- */
+/* --- the dot style of event --- */
+.fc-daygrid-dot-event {
+  display:inline-grid;
+  align-items: center;
+  padding: 2px 0
+
+}
+.fc-daygrid-dot-event .fc-event-title {
+    flex-grow: 1;
+    flex-shrink: 14;
+    min-width: 0; /* important for allowing to shrink all the way */
+    overflow: hidden;
+    font-weight: bold;
+  }
+.fc-daygrid-dot-event:hover,
+  .fc-daygrid-dot-event.fc-event-mirror {
+    background: rgba(0, 0, 0, 0.1);
+  }
+.fc-daygrid-dot-event.fc-event-selected:before {
+    /* expand hit area */
+    top: -10px;
+    bottom: -10px;
+  }
+  .fc-daygrid-event {
+    position: relative;
+    height: 100%;
+    white-space: normal;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: .85em;
+    font-size: var(--fc-small-font-size, .85em);
+}
+:root {
+  --fc-daygrid-event-dot-width: 15px;
+}
+.fc-event-title-container
+{
+  font-weight: bold;
+}
+.fc .fc-timegrid-slot
+{
+  font-weight: bold;
+}

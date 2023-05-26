@@ -1,0 +1,168 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+  
+    <!--  Layout Primary  -->
+    <div id="layoutDrawer">
+      <!--  Sidebar Container -->
+      <app-teacher-sidebar></app-teacher-sidebar>
+  
+      <!--
+          =============================================
+          Main section layout
+          ==============================================
+      -->
+      <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+          <!-- Page header-->
+          <header class="bg-primary" >
+            <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Information complementaire</h1></div>
+          </header>
+
+          <div class="row g-0">
+            <div class="col-lg-10 col-md-10">
+              <div class="card-body p-5">
+  
+                <!-- Login submission form-->
+                <form class="mb-5" method="post">
+                 
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label >Salle de classe</label>
+                      <select name="" class="form-control">
+                        <option value="">Selectionner une salle de classe</option>
+                        <option value="6eme">6eme</option>
+                        <option value="5eme">5eme</option>
+                        <option value="4eme">4eme</option>
+                        <option value="3eme">3eme</option>
+                        <option value="2nd">2nd</option>
+                        <option value="1ere">1ere</option>
+                        <option value="Tle">Tle</option>
+              
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label >Matiere</label>
+                      <select name="" class="form-control">
+                        <option value="">Selectionner la matiere concerné</option>
+                        <option value="mathematique">mathematique</option>
+                        <option value="physique">physique</option>
+                        <option value="chimie">chimie</option>
+                        <option value="Francais">Francais</option>
+                        <option value="Anglais">Anglais</option>
+                        <option value="Science de la vie et de la terre">Science de la vie et de la terre</option>
+                        <option value="Histoire et Geographie">Histoire et Geographie</option>
+              
+                      </select>
+                    </div>
+                  </div>
+               
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label for="date">Date et Heure  </label>
+                    <input type="datetime-local" class="form-control" id="date"  placeholder="Date of event">
+                  </div>
+                </div>
+
+                <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                  <a class="btn btn-primary mdc-ripple-upgraded" href="#">Confirmer</a>
+                </div>
+  
+                </form>
+                <!-- Auth card message-->
+             
+              </div>
+  
+            </div>
+            <!-- Background image column using inline CSS-->
+            <!-- <div class="col-lg-7 col-md-6 d-none d-md-block">
+              <div class="card card-raised">
+                <div class="card-body text-center p-5">
+                  <img class="img-fluid mb-5" src="../../../../assets/img/images/create.svg" alt="image" style="max-width: 20rem">
+                  <p class="card-text">Gerer le materiel pedagogique  !</p>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        <!-- Liste de presence -->
+        <header class="" style="background-color: #6e83d3;">
+            <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Liste de presence </h1></div>
+          </header>
+          <div class="row g-0">
+            <div class="col-lg-12 col-md-12">
+              <div class="card-body p-5">
+  
+           
+                <div class="card-body p-4">
+                    <!-- Simple DataTables example-->
+                    <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                    
+                        <div class="datatable-container">
+                            <table id="example1" class="table dataTable">
+                                <thead>
+                                    <tr>
+                                        <th data-sortable="true" >
+                                            <a href="#" class="datatable-sorter">N°</a>
+                                        </th>
+                                        <th data-sortable="true" >
+                                            <a href="#" class="datatable-sorter">Matricule</a>
+                                        </th>
+                                        <th data-sortable="true">
+                                            <a href="#" class="datatable-sorter">Nom et prenoms</a>
+                                        </th>
+                                            <th data-sortable="true" >
+                                                <a href="#" class="datatable-sorter">Date de naissance</a>
+                                            </th>
+                                                <th data-sortable="true" >
+                                                    <a href="#" class="datatable-sorter">Lieu de naissance</a>
+                                                </th>
+                                                <th data-sortable="true" >
+                                                    <a href="#" class="datatable-sorter">Status</a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr >
+                                                <td>1</td>
+                                                <td>19A0452EP</td>
+                                                <td>Mister Abdel Abbo</td>
+                                                <td class="">06-04-2001</td>
+                                                <td class="">Ngaoundere</td>
+                                                <td class="text-success text-bold">Present </td>
+
+                                            </tr>
+                                            <tr >
+                                                <td>2</td>
+                                                <td>19A0452EP</td>
+                                                <td>Koiranga</td>
+                                                <td class="">06-04-2023</td>
+                                                <td class="">Maroua</td>
+                                                <td class="text-danger text-bold">Absent </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                        </div>
+                </div>
+            
+              </div>
+
+            </div>
+        
+          </div>
+
+
+        </main>
+  
+        <!-- Footer content-->
+        <app-footer></app-footer>
+      </div>
+    </div>
+  
+  </div>
+  

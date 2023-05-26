@@ -1,0 +1,245 @@
+<div class="wrapper">
+<!-- Main  header -->
+<app-main-header2></app-main-header2>
+    
+<!--  Layout Primary  -->
+    <div id="layoutDrawer">
+        <!--  Sidebar Container -->
+        <app-principal-sidebar></app-principal-sidebar> 
+
+            <div id="layoutDrawer_content">
+                <main>
+                    <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1><a class="text.primary"><i class="fas fa-home"></i> Gestion des salles</a></h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"></li>
+                                <li class="breadcrumb-item" ><a href="principal/infoEtablissement" style="color : #6c757d ;"> <i class="fas fa-edit"></i> Mon etablissement</a></li>
+                                <li class="breadcrumb-item"><a href="principal/reglement" style="color : #6c757d ;"> <i class="fas fa-edit"></i> Reglement interieur</a></li>
+                                <li class="breadcrumb-item active"> <a href="princpal/sanction" style="color : #6c757d ;"> <i class="fas fa-cog"></i> Sanctions</a></li>
+                            </ol>
+                        </div>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                    </section>
+                    <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card card-primary">
+                                <div class="card-header">
+                                            <i class="fas fa-edit"></i>
+                                            Ajouter une salle
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                </div>
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Section</label>
+                                                    <select class="form-control" name="sectionadd">
+                                                    <option value="2022/2023">Anglophone</option>
+                                                    <option value="2022/2023">Francophone</option>
+                                                    </select>
+                                                </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Cycle</label>
+                                                    <select class="form-control" name="cycleadd">
+                                                    <option value="2022/2023">cycle 1</option>
+                                                    <option value="2022/2023">cycle 2 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Salle</label>
+                                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="salle" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Serie</label>
+                                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="serieadd" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Frais de scolarité</label>
+                                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="fraisadd" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">Ajouter</button>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                        <div class="col-12">
+                            <!-- /.card -->
+                
+                            <div class="card">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Section</th>
+                                    <th>Cycle</th>
+                                    <th>salle</th>
+                                    <th>serie</th>
+                                    <th>Frais de scolarite</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Anglophone</td>
+                                    <td>Cycle 1</td>
+                                    <td>6 eme 1</td>
+                                    <td></td>
+                                    <td>50000</td>
+                                    <td>
+                                        <button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#collapseModifieSalle1" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="fas fa-edit"></i>
+                                            modifier
+                                        </button>
+                                        <div class="collapse" id="collapseModifieSalle1">
+                                            <div class="card card-body">
+                                                <form action="" method="post">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Section</label>
+                                                        <select class="form-control" name="section">
+                                                        <option value="2022/2023">Anglophone</option>
+                                                        <option value="2022/2023">Francophone</option>
+                                                        </select>
+                                                    </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Cycle</label>
+                                                        <select class="form-control" name="cyclemodi">
+                                                        <option value="2022/2023">cycle 1</option>
+                                                        <option value="2022/2023">cycle 2 </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Salle</label>
+                                                        <input type="text" class="form-control" aria-describedby="emailHelp" name="sallemodif" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Serie</label>
+                                                        <input type="text" class="form-control" aria-describedby="emailHelp" name="seriemodif" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Frais de scolarité</label>
+                                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="fraismodif" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <button type="submit" class="btn btn-info btn-xs btne">modifier</button>
+                                        </form>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Anglophone</td>
+                                    <td>Cycle 1</td>
+                                    <td>6 eme 2</td>
+                                    <td></td>
+                                    <td>50000</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#collapseModifieSalle2" aria-expanded="false" aria-controls="collapseExample">
+                                                <i class="fas fa-edit"></i>
+                                                modifier
+                                            </button>
+                                            <div class="collapse" id="collapseModifieSalle2">
+                                                <div class="card card-body">
+                                                    <form action="" method="post">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Section</label>
+                                                            <select class="form-control" name="section">
+                                                            <option value="2022/2023">Anglophone</option>
+                                                            <option value="2022/2023">Francophone</option>
+                                                            </select>
+                                                        </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Cycle</label>
+                                                            <select class="form-control" name="cycle">
+                                                            <option value="2022/2023">cycle 1</option>
+                                                            <option value="2022/2023">cycle 2 </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Salle</label>
+                                                            <input type="text" class="form-control" aria-describedby="emailHelp" name="salle" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Serie</label>
+                                                            <input type="text" class="form-control" aria-describedby="emailHelp" name="serie" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Frais de scolarité</label>
+                                                            <input type="number" class="form-control" aria-describedby="emailHelp" name="frais" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">Ajouter</button>
+                                            </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                    </section>
+                </main>
+            </div>
+        
+        <!-- /.content -->
+    </div>
+   <app-footer></app-footer> 
+</div>
+  

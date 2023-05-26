@@ -1,0 +1,236 @@
+<div class="wrapper">
+
+    
+    <!-- Main  header -->
+    <app-main-header></app-main-header> 
+    
+
+    <!-- Main Sidebar Container -->
+     <app-principal-sidebar></app-principal-sidebar> 
+     <!--MODAL AJOUTER -->
+        <div class="modal fade" id="staticBackdropAddSalle" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Ajouter une salle</h5>
+                        <button type="button" class="close false" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Session</label>
+                                    <select class="form-control" name="session">
+                                    <option value="2022/2023">Anglophone</option>
+                                    <option value="2022/2023">Francophone</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Cycle</label>
+                                    <select class="form-control" name="cycle">
+                                    <option value="2022/2023">cycle 1</option>
+                                    <option value="2022/2023">cycle 2 </option>
+                                    </select>
+                                </div>
+                                <div class="form-group autocomplete">
+                                    <label for="exampleInputEmail1">Salle</label>
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="salle" value="">
+                                </div>
+                                <div class="form-group autocomplete">
+                                    <label for="exampleInputEmail1">Serie</label>
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="serie" value="">
+                                </div>
+                                <div class="form-group autocomplete">
+                                    <label for="exampleInputEmail1">Frais de scolarité</label>
+                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="frais" value="">
+                                </div>
+                                <div class="form-group autocomplete">
+                                    <label for="exampleInputEmail1">Tranche</label>
+                                   <div class="row">
+                                    <div class="col-3">
+                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche1" value="" placeholder="tranche1">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche2" value="" placeholder="tranche2">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche3" value="" placeholder="tranche3">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche4" value="" placeholder="tranche4">
+                                    </div>
+                                   </div>
+                                </div>
+                            <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">Ajouter</button>
+                        </form>
+                    </div>
+                    
+                    </div>
+            </div>
+        </div>
+    <!--MODAL MODIFIER -->
+    <div class="modal fade" id="staticBackdropUpdateSalle" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modifier une salle</h5>
+                    <button type="button" class="close false" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Session</label>
+                                <select class="form-control" name="session">
+                                <option value="2022/2023">Anglophone</option>
+                                <option value="2022/2023">Francophone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Cycle</label>
+                                <select class="form-control" name="cycle">
+                                <option value="2022/2023">cycle 1</option>
+                                <option value="2022/2023">cycle 2 </option>
+                                </select>
+                            </div>
+                            <div class="form-group autocomplete">
+                                <label for="exampleInputEmail1">Salle</label>
+                                <input type="text" class="form-control" aria-describedby="emailHelp" name="salle" value="">
+                            </div>
+                            <div class="form-group autocomplete">
+                                <label for="exampleInputEmail1">Serie</label>
+                                <input type="text" class="form-control" aria-describedby="emailHelp" name="serie" value="">
+                            </div>
+                            <div class="form-group autocomplete">
+                                <label for="exampleInputEmail1">Frais de scolarité</label>
+                                <input type="number" class="form-control" aria-describedby="emailHelp" name="frais" value="">
+                            </div>
+                            <div class="form-group autocomplete">
+                                <label for="exampleInputEmail1">Tranche</label>
+                               <div class="row">
+                                <div class="col-3">
+                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche1" value="" placeholder="tranche1">
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche2" value="" placeholder="tranche2">
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche3" value="" placeholder="tranche3">
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" class="form-control" aria-describedby="emailHelp" name="tranche4" value="" placeholder="tranche4">
+                                </div>
+                               </div>
+                            </div>
+                        <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">Modifier</button>
+                    </form>
+                </div>
+                
+                </div>
+        </div>
+    </div>
+     <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>A propos / gestion des salles</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item" data-toggle="modal" data-target="#staticBackdropAddSalle"><a class="text.primary"> <i class="fas fa-edit"></i> Ajouter une salle</a></li>
+                  <li class="breadcrumb-item active">Reglement interieur / <li>
+                  <li class="breadcrumb-item active"> Sanctions</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <!-- /.card -->
+    
+                <div class="card">
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                        <th>Session</th>
+                        <th>salle</th>
+                        <th>serie</th>
+                        <th>Frais de scolarite</th>
+                        <th>tranche</th>
+                        <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>Anglophone</td>
+                        <td>6 eme 1</td>
+                        <td></td>
+                        <td>50000</td>
+                        <td>tranche 1 : 35000 <br>
+                            tranche 2 : 10000</td>
+                        <td>
+                            <button type="submit" class="btn btn-success btne" data-toggle="modal" data-target="#staticBackdropUpdateSalle" style="background-color:#001f3f ;">modifier</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Anglophone</td>
+                        <td>6 eme 2</td>
+                        <td></td>
+                        <td>50000</td>
+                        <td>tranche 1 : 35000 <br>
+                            tranche 2 : 10000</td>
+                        <td>
+                            <button type="submit" class="btn btn-success btne" data-toggle="modal" data-target="#staticBackdropUpdateSalle" style="background-color:#001f3f ;">modifier</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Anglophone</td>
+                        <td>6 eme 3</td>
+                        <td></td>
+                        <td>50000</td>
+                        <td>tranche 1 : 35000 <br>
+                            tranche 2 : 10000</td>
+                        <td>
+                            <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">modifier</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Anglophone</td>
+                        <td>5 eme</td>
+                        <td></td>
+                        <td>50000</td>
+                        <td>tranche 1 : 35000 <br>
+                            tranche 2 : 10000</td>
+                        <td>
+                            <button type="submit" class="btn btn-success btne" style="background-color:#001f3f ;">modifier</button>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+    
+        <!-- /.content -->
+      </div>
+   <app-footer></app-footer> 
+   
+  </div>
+  

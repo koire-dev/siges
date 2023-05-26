@@ -1,0 +1,101 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+  
+    <!--  Layout Primary  -->
+    <div id="layoutDrawer">
+      <!--  Sidebar Container -->
+      <app-econome-sidebar></app-econome-sidebar>
+  
+      <!--
+          =============================================
+          Main section layout
+          ==============================================
+      -->
+      <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+          <!-- Page header-->
+          <header class="bg-primary" >
+            <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Ajouter un nouveau materiel </h1></div>
+          </header>
+          <div class="row g-0">
+            <div class="col-lg-5 col-md-6">
+              <div class="card-body p-5">
+  
+                <!-- Login submission form-->
+                <form class="mb-5" method="post">
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label for="name">Nom du materiel</label>
+                      <input type="text" name="name_event" class="form-control" id="name" aria-describedby="name" placeholder="Nom du materiel">
+                    </div>
+                  </div>  
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label >Type de materiel</label>
+                      <select name="" class="form-control">
+                        <option value="">Selectionner le type concerne</option>
+                        <option value="bureau">Bureau</option>
+                        <option value="bureau">Fourniture scolaire</option>
+                        <option value="menage">Menage</option>
+                        <option value="meuble">Meuble</option>
+                        <option value="informatique">informatique</option>
+              
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label for="name">Quantite</label>
+                      <input type="number" name="name_event" class="form-control" id="name" aria-describedby="name" placeholder="Quantite">
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label for="name">Montant</label>
+                      <input type="number" name="name_event" class="form-control" id="name" aria-describedby="name" placeholder="Montant">
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="form-group">
+                      <label for="name">justification</label>
+                      <textarea class="form-control" name="" id="" cols="30" rows="5">Write your motivation here !</textarea>
+                    </div>
+                  </div>
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label for="date">Date et Heure </label>
+                    <input type="datetime-local" class="form-control" id="date"  placeholder="Date of event">
+                  </div>
+                </div>
+
+                <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                  <a class="btn btn-primary mdc-ripple-upgraded" href="index.html">Enregistrer</a>
+                </div>
+  
+                </form>
+                <!-- Auth card message-->
+             
+              </div>
+  
+            </div>
+            <!-- Background image column using inline CSS-->
+            <div class="col-lg-7 col-md-6 d-none d-md-block">
+              <div class="card card-raised">
+                <div class="card-body text-center p-5">
+                  <img class="img-fluid mb-5" src="../../../../assets/img/images/create.svg" alt="image" style="max-width: 20rem">
+                  <p class="card-text">Gerer le materiel pedagogique  !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+  
+        <!-- Footer content-->
+        <app-footer></app-footer>
+      </div>
+    </div>
+  
+  </div>
+  

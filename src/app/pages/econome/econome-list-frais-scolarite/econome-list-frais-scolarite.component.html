@@ -1,1 +1,90 @@
-<p>econome-list-frais-scolarite works!</p>
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+  
+    <!--  Layout Primary  -->
+    <div id="layoutDrawer">
+      <!--  Sidebar Container -->
+      <app-econome-sidebar></app-econome-sidebar>
+  
+      <!--
+          =============================================
+          Main section layout
+          ==============================================
+      -->
+      <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+          <!-- Page header-->
+          <header class="" style="background-color: #6e83d3;">
+            <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Liste des frais de scolarite </h1></div>
+          </header>
+          <div class="row g-0">
+            <div class="col-lg-12 col-md-12">
+              <div class="card-body p-5">
+  
+           
+                <div class="card-body p-4">
+                    <!-- Simple DataTables example-->
+                    <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
+                    
+                        <div class="datatable-container">
+                            <table id="example1" class="table dataTable">
+                                <thead>
+                                    <tr>
+                                        <th data-sortable="true" >
+                                            <a href="#" class="datatable-sorter">Matricule</a>
+                                        </th>
+                                        <th data-sortable="true" >
+                                            <a href="#" class="datatable-sorter">Noms</a>
+                                        </th>
+                                        <th data-sortable="true">
+                                            <a href="#" class="datatable-sorter">Classe</a>
+                                        </th>
+                                            <th data-sortable="true" >
+                                                <a href="#" class="datatable-sorter">Type de paiement</a>
+                                            </th>
+                                                <th data-sortable="true" >
+                                                    <a href="#" class="datatable-sorter">Frais de l'examen</a>
+                                                </th>
+                                                <th data-sortable="true" >
+                                                    <a href="#" class="datatable-sorter">Frais de l'APEE</a>
+                                                </th>
+                                                <th data-sortable="true" >
+                                                    <a href="#" class="datatable-sorter">Actions</a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-index="0">
+                                                <td>21D0469EP</td>
+                                                <td>Mister Abdel</td>
+                                                <td>Tle</td>
+                                                <td class="text-success">Integralite</td>
+                                                <td class="text-success">Oui</td>
+                                                <td class="text-success">Oui</td>
+                                                <td>
+                                                    <button class="btn btn-warning"> <i class="fa fa-edit"></i></button>
+                                                    <button class="btn btn-danger"> <i class="fa fa-trash"></i></button>
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                            </div>
+                    </div>
+                </div>
+              
+              </div>
+  
+            </div>
+        
+          </div>
+        </main>
+  
+        <!-- Footer content-->
+        <app-footer></app-footer>
+      </div>
+    </div>
+  
+  </div>
+  
