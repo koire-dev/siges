@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IMatiere } from 'src/app/interfaces/i-matiere';
 
@@ -6,14 +7,14 @@ import { IMatiere } from 'src/app/interfaces/i-matiere';
 })
 export class MatiereService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+  readonly API_URL = "http://localhost:8093/"
 
-  public getAll():IMatiere[]{
-    return [
-      {
-        id:"11",
-        label :"Mathematique"
-      }
-    ]
+  public getAll() {
+    return this.http.get(this.API_URL + "findAllMatiere" )
+  }
+
+  public  save(data:any){
+    return this.http.post(this.API_URL + "addMatiere",data )
   }
 }

@@ -57,20 +57,9 @@
                                             <td></td>
                                             <td>{{personnel.label}}</td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-default">Action</button>
-                                                    <button type="button"
-                                                        class="btn btn-default dropdown-toggle dropdown-icon"
-                                                        data-toggle="dropdown">
-                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                    </button>
-                                                    <div class="dropdown-menu" role="menu">
-                                                        <a class="dropdown-item" href="#">Editer </a>
-                                                        <a class="dropdown-item" href="#">Supprimer</a>
-
-
-                                                    </div>
-                                                </div>
+                                                <a class="btn btn-primary"> <i class="fa fa-edit"></i> </a>
+                                                &nbsp;&nbsp;
+                                                <a class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -116,7 +105,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Enregistrer</button>
+                <button type="button" class="btn btn-primary " (click)="save()">Enregistrer</button>
             </div>
         </div>
         <!-- /.modal-content -->

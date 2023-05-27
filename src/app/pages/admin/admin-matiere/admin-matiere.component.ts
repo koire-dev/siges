@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IMatiere } from 'src/app/interfaces/i-matiere';
 import { MatiereService } from 'src/app/services/matiere/matiere.service';
 
 @Component({
@@ -9,10 +8,22 @@ import { MatiereService } from 'src/app/services/matiere/matiere.service';
 })
 export class AdminMatiereComponent  implements OnInit{
 
-  public matieres:IMatiere[]=[]
+  public matieres:any
   constructor(private matiereService:MatiereService){}
 
+  
   ngOnInit(): void {
-    this.matieres = this.matiereService.getAll();
-  }
+    this.matiereService.getAll().subscribe((data)=>{
+      this.matieres = data
+     
+    })
+ 
+ }
+ save(){
+  let record  ={"label":"Philo"}
+
+  this.matiereService.save(record).subscribe()
+ 
+
+}
 }

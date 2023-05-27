@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { ITypePermission } from 'src/app/interfaces/i-type-permission';
 import { TypePermissionService } from 'src/app/services/type-permission/type-permission.service';
 
@@ -8,10 +9,26 @@ import { TypePermissionService } from 'src/app/services/type-permission/type-per
   styleUrls: ['./admin-type-permission.component.css']
 })
 export class AdminTypePermissionComponent implements OnInit {
-  public permissions:ITypePermission[] = []
-  constructor(private permissionService: TypePermissionService){}
+  public permissions: any
+  dataForm = new FormGroup({
+    label: new FormControl(''),
+  });
+  constructor(private permissionService: TypePermissionService) { }
 
   ngOnInit(): void {
-    this.permissions = this.permissionService.getAll()
+    this.loadData()
   }
+  loadData() {
+    this.permissionService.getAll().subscribe((data) => {
+      this.permissions = data
+
+    })
+  }
+  save() {
+    this.permissionService.save(this.dataForm).subscribe()
+    window.location.reload();
+    this.loadData()
+
+  }
+
 }

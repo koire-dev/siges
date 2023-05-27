@@ -12,6 +12,6 @@ export class AdminCycleComponent  implements OnInit{
   public series:ISerie[]= []
   constructor(private serieService : SerieService){}
   ngOnInit(): void {
-    this.series= this.serieService.getAll()
+   // this.series= this.serieService.getAll()
   }
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ICycle } from 'src/app/interfaces/i-cycle';
 
@@ -5,15 +6,11 @@ import { ICycle } from 'src/app/interfaces/i-cycle';
   providedIn: 'root'
 })
 export class CycleService {
-
-  constructor() { }
-
-  public getAll():ICycle[]{
-    return [
-      {
-        id:"11",
-        label:"1er"
-      }
-    ]
+  constructor(private http: HttpClient) { }
+  readonly API_URL = "http://localhost:8093/"
+  public getAll() {
+    return this.http.get(this.API_URL + "findAllCycle" )
   }
+
+  
 }

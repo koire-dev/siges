@@ -10,8 +10,13 @@ import { TeacherNotesComponent } from './pages/teacher/teacher-notes/teacher-not
 import { TeacherDashboardComponent } from './pages/teacher/teacher-dashboard/teacher-dashboard.component';
 import { TeacherAddNotesComponent } from './pages/teacher/teacher-add-notes/teacher-add-notes.component';
 import { routesEconome } from './pages/econome/econome.routing.module';
+import { LoginComponent } from './pages/common/login/login.component';
 
 const routes: Routes = [
+  {
+    path : "",
+    component: LoginComponent
+  },
   {
     path:"lockscreen",
     component: LockScreenComponent

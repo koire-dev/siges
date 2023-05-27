@@ -5,16 +5,39 @@ import { AnneeAcademiqueService } from 'src/app/services/annee-academique/annee-
 @Component({
   selector: 'app-admin-annee-academique',
   templateUrl: './admin-annee-academique.component.html',
-  styleUrls: ['./admin-annee-academique.component.css']
+  styleUrls: ['./admin-annee-academique.component.css'],
 })
 export class AdminAnneeAcademiqueComponent implements OnInit{
 
-  public annees : IAnneeAcademique[] =[]
-  public statut :String ="active"
-  constructor( private anneeService:AnneeAcademiqueService){}
+  public years: any
+  
+  constructor( private anneeService:AnneeAcademiqueService){
+    
+  }
 
   ngOnInit(): void {
-  this.annees = this.anneeService.getAll()
+     this.anneeService.getAllYears().subscribe((data)=>{
+       this.years = data
+      
+     })
+  
+  }
+
+  
+  enableYear(item:any) {
+    this.anneeService.updateStatus(item.attributes['data-yearid'].value,"active")
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 3); 
+  }
+  disableYear(item:any) {
+    console.log(item.attributes['data-yearid'].value);
+    this.anneeService.updateStatus(item.attributes['data-yearid'].value,"inactive")
+    console.log(this.anneeService.updateStatus(item.attributes['data-yearid'].value,"inactive"))
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 3); 
+
   }
 
 }

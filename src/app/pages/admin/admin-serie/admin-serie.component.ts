@@ -9,11 +9,22 @@ import { SerieService } from 'src/app/services/serie/serie.service';
 })
 export class AdminSerieComponent implements OnInit {
 
-  public series:ISerie[] = []
+  public series:any
   constructor(private serieService : SerieService){}
 
   ngOnInit(): void {
-    this.series = this.serieService.getAll()
-  }
+    this.serieService.getAll().subscribe((data)=>{
+      this.series = data
+     
+    })
+ 
+ }
+ save(){
+  let record  ={"label":"C"}
+
+  this.serieService.save(record).subscribe()
+ 
+
+}
 
 }

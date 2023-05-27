@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './pages/sg/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { DashboardComponent } from './pages/sg/dashboard/dashboard.component';
 import { MainHeaderComponent } from './pages/common/main-header/main-header.component';
 import { FooterComponent } from './pages/common/footer/footer.component';
 import { SgSidebarComponent } from './pages/sg/sg-sidebar/sg-sidebar.component';
@@ -51,6 +53,7 @@ import { EconomeDashboardComponent } from './pages/econome/econome-dashboard/eco
 import { EconomeListFraisScolariteComponent } from './pages/econome/econome-list-frais-scolarite/econome-list-frais-scolarite.component';
 import { EconomeSidebarComponent } from './pages/econome/econome-sidebar/econome-sidebar.component';
 import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
+import { LoginComponent } from './pages/common/login/login.component';
 
 @NgModule({
   declarations: [
@@ -104,12 +107,15 @@ import { MainHeader2Component } from './pages/common/main-header2/main-header2.c
     EconomeListFraisScolariteComponent,
     EconomeSidebarComponent,
     EconomeSidebarComponent,
-    MainHeader2Component
+    MainHeader2Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
