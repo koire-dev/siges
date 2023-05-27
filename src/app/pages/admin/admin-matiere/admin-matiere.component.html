@@ -48,14 +48,14 @@
                                     <thead>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Label</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let matiere of matieres" id="{{matiere.id}}">
                                             <td> </td>
-                                            <td>{{matiere.label}}</td>
+                                            <td>{{matiere.intitule}}</td>
                                             <td>
                                                 <a class="btn btn-primary"> <i class="fa fa-edit"></i> </a>
                                                 &nbsp;&nbsp;
@@ -66,7 +66,7 @@
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Label</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -89,27 +89,29 @@
 </div>
 
 <div class="modal fade" id="new-record">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Nouvelle matiere</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="">Labelle *</label>
-                    <input type="text" name="" id="" class="form-control">
+    <form [formGroup]="dataForm" (ngSubmit)="save()">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Nouvelle matiere</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">Label *</label>
+                        <input type="text" formControlName="intitule" id="" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
                 </div>
             </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary" (click)="save()">Enregistrer</button>
-            </div>
+            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-content -->
-    </div>
+    </form>
     <!-- /.modal-dialog -->
 </div>
 <div class="modal fade" id="edit-record">
@@ -123,8 +125,8 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="">Labelle *</label>
-                    <input type="text" name="" id="" class="form-control">
+                    <label for="">Label *</label>
+                    <input type="text" id="" class="form-control">
                 </div>
             </div>
             <div class="modal-footer justify-content-between">

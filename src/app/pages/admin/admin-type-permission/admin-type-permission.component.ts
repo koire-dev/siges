@@ -25,7 +25,8 @@ export class AdminTypePermissionComponent implements OnInit {
     })
   }
   save() {
-    this.permissionService.save(this.dataForm).subscribe()
+
+    this.permissionService.save(this.dataForm.value).subscribe()
     window.location.reload();
     this.loadData()
 

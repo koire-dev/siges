@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl,FormGroup } from '@angular/forms';
 import { MatiereService } from 'src/app/services/matiere/matiere.service';
 
 @Component({
@@ -9,20 +10,27 @@ import { MatiereService } from 'src/app/services/matiere/matiere.service';
 export class AdminMatiereComponent  implements OnInit{
 
   public matieres:any
+  dataForm = new FormGroup({
+    intitule: new FormControl(''),
+  });
   constructor(private matiereService:MatiereService){}
 
   
   ngOnInit(): void {
-    this.matiereService.getAll().subscribe((data)=>{
-      this.matieres = data
-     
-    })
+    this.loadData()
  
  }
+ loadData(){
+  this.matiereService.getAll().subscribe((data)=>{
+    this.matieres = data
+   
+  })
+ }
  save(){
-  let record  ={"label":"Philo"}
-
-  this.matiereService.save(record).subscribe()
+  
+  this.matiereService.save(this.dataForm.value).subscribe()
+  window.location.reload();
+    this.loadData()
  
 
 }
