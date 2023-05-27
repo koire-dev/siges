@@ -1,6 +1,5 @@
+import { CycleService } from './../../../services/cycle/cycle.service';
 import { Component, OnInit } from '@angular/core';
-import { ISerie } from 'src/app/interfaces/i-serie';
-import { SerieService } from 'src/app/services/serie/serie.service';
 
 @Component({
   selector: 'app-admin-cycle',
@@ -9,9 +8,15 @@ import { SerieService } from 'src/app/services/serie/serie.service';
 })
 export class AdminCycleComponent  implements OnInit{
 
-  public series:ISerie[]= []
-  constructor(private serieService : SerieService){}
+  public cycles:any
+  constructor(private cycleService : CycleService){}
   ngOnInit(): void {
-   // this.series= this.serieService.getAll()
+    this.loadData()
+  }
+  loadData() {
+    this.cycleService.getAll().subscribe((data) => {
+      this.cycles = data
+
+    })
   }
 }

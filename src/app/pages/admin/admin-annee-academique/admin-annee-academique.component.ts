@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IAnneeAcademique } from 'src/app/interfaces/i-annee-academique';
+import { FormGroup, FormControl } from '@angular/forms';
 import { AnneeAcademiqueService } from 'src/app/services/annee-academique/annee-academique.service';
 
 @Component({
@@ -10,17 +10,34 @@ import { AnneeAcademiqueService } from 'src/app/services/annee-academique/annee-
 export class AdminAnneeAcademiqueComponent implements OnInit{
 
   public years: any
-  
+  dataForm = new FormGroup({
+    date_debut: new FormControl(''),
+    date_fin: new FormControl(''),
+    statut: new FormControl(''),
+  });
   constructor( private anneeService:AnneeAcademiqueService){
     
   }
 
   ngOnInit(): void {
-     this.anneeService.getAllYears().subscribe((data)=>{
-       this.years = data
-      
-     })
+     this.loadData()
   
+  }
+  loadData(){
+    this.anneeService.getAllYears().subscribe((data)=>{
+      this.years = data
+     
+    })
+  }
+  save() {
+      this.dataForm.patchValue({
+        statut: "inactive"
+      })
+    this.anneeService.save(this.dataForm.value).subscribe()
+    window.location.reload();
+    this.loadData()
+
+
   }
 
   

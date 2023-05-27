@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AnneeAcademiqueService {
 
   constructor(private http: HttpClient) { }
-  readonly API_URL = "http://localhost:8093/"
+  readonly API_URL = "http://localhost:8080/"
   public getAllYears() {
     return this.http.get(this.API_URL + "findAllYears" )
   }
@@ -16,6 +16,9 @@ export class AnneeAcademiqueService {
   public updateStatus(_id:String, _status:String) {
    // return this.http.get(this.API_URL + "findAllYears" )
    return this.http.put(this.API_URL + "updateStatus/"+_id,_status)
+  }
+  public  save(data:any){
+    return this.http.post(this.API_URL + "addYear",data )
   }
 
 }

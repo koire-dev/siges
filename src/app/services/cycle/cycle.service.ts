@@ -7,7 +7,7 @@ import { ICycle } from 'src/app/interfaces/i-cycle';
 })
 export class CycleService {
   constructor(private http: HttpClient) { }
-  readonly API_URL = "http://localhost:8093/"
+  readonly API_URL = "http://localhost:8080/"
   public getAll() {
     return this.http.get(this.API_URL + "findAllCycle" )
   }
