@@ -26,7 +26,7 @@
             </div><!-- /.container-fluid -->
         </section>
 
-        <!-- Main content --> 
+        <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -37,18 +37,20 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#new-record">
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal"
+                                    data-target="#new-record">
                                     Nouvelle salle
-                                  </button>
-                                  <br>
-                                  <br>
-                                  <br>
+                                </button>
+                                <br>
+                                <br>
+                                <br>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Label</th>
                                             <th>Serie</th>
+                                            <th>Cycle</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,30 +58,21 @@
                                         <tr *ngFor="let salle of salles" id="{{salle.id}}">
                                             <td> </td>
                                             <td>{{salle.label}}</td>
-                                            <td>{{salle.serie.label}}</td>
+                                            <td>{{salle.serie}}</td>
+                                            <td>{{salle.cycle}}</td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-default">Action</button>
-                                                    <button type="button"
-                                                        class="btn btn-default dropdown-toggle dropdown-icon"
-                                                        data-toggle="dropdown">
-                                                        <span class="sr-only">Toggle Dropdown</span>
-                                                    </button>
-                                                    <div class="dropdown-menu" role="menu">
-                                                        <a class="dropdown-item" href="#">Editer </a>
-                                                        <a class="dropdown-item" href="#">Supprimer</a>
-
-
-                                                    </div>
-                                                </div>
+                                                <a class="btn btn-primary"> <i class="fa fa-edit"></i> </a>
+                                                &nbsp;&nbsp;
+                                                <a class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
                                             </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
-                                            <th>Labelle</th>
+                                            <th>Label</th>
                                             <th>Serie</th>
+                                            <th>Cycle</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -102,50 +95,65 @@
 </div>
 
 <div class="modal fade" id="new-record">
-<div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header">
-        <h4 class="modal-title">Nouvelle salle</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="">Labelle *</label>
-            <input type="text" name="" id="" class="form-control">
+    <form [formGroup]="dataForm" (ngSubmit)="save()">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Nouvelle salle</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">Label *</label>
+                        <input type="text" formControlName="label" id="label" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Serie </label>
+                        <select class="form-control " formControlName="serie">
+                            <option *ngFor="let serie of series" [ngValue]="serie.label">{{serie.label}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cycle </label>
+                        <select class="form-control " formControlName="cycle">
+                            <option *ngFor="let cycle of cycles" [ngValue]="cycle.label">{{cycle.label}}</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
         </div>
-    </div>
-    <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Enregistrer</button>
-    </div>
-    </div>
-    <!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
+    </form>
+    <!-- /.modal-dialog -->
 </div>
 <div class="modal fade" id="edit-record">
-<div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header">
-        <h4 class="modal-title">Editer salle</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <div class="form-group">
-            <label for="">Labelle *</label>
-            <input type="text" name="" id="" class="form-control">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Editer salle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="">Label *</label>
+                    <input type="text" name="" id="" class="form-control">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Enregistrer</button>
+            </div>
         </div>
+        <!-- /.modal-content -->
     </div>
-    <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Enregistrer</button>
-    </div>
-    </div>
-    <!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
+    <!-- /.modal-dialog -->
 </div>

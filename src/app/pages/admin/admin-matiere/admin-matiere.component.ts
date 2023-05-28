@@ -12,6 +12,7 @@ export class AdminMatiereComponent  implements OnInit{
   public matieres:any
   dataForm = new FormGroup({
     intitule: new FormControl(''),
+    groupe: new FormControl(''),
   });
   constructor(private matiereService:MatiereService){}
 
@@ -27,6 +28,8 @@ export class AdminMatiereComponent  implements OnInit{
   })
  }
  save(){
+
+  console.log(this.dataForm.value)
   
   this.matiereService.save(this.dataForm.value).subscribe()
   window.location.reload();

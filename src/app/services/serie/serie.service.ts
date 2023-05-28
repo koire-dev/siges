@@ -17,4 +17,7 @@ export class SerieService {
   public  save(data:any){
     return this.http.post(this.API_URL + "addSerie",data )
   }
+  public getById(id:any) {
+    return this.http.get(this.API_URL + "findSerie/"+id )
+  }
 }

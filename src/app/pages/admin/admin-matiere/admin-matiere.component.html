@@ -48,7 +48,8 @@
                                     <thead>
                                         <tr>
                                             <th>N</th>
-                                            <th>Label</th>
+                                            <th>Label</th>                                            
+                                            <th>Groupe</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,6 +57,7 @@
                                         <tr *ngFor="let matiere of matieres" id="{{matiere.id}}">
                                             <td> </td>
                                             <td>{{matiere.intitule}}</td>
+                                            <td>{{matiere.groupe}}</td>
                                             <td>
                                                 <a class="btn btn-primary"> <i class="fa fa-edit"></i> </a>
                                                 &nbsp;&nbsp;
@@ -66,7 +68,8 @@
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
-                                            <th>Label</th>
+                                            <th>Label</th>                                            
+                                            <th>Groupe</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -103,6 +106,15 @@
                         <label for="">Label *</label>
                         <input type="text" formControlName="intitule" id="" class="form-control">
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Groupe matiere </label>
+                    <select class="form-control " formControlName="groupe" >
+                        <option  [ngValue]="1">Groupe 1</option>
+                        <option  [ngValue]="2">Groupe 2</option>
+                        <option  [ngValue]="3">Groupe 3</option>
+                    </select>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>

@@ -12,5 +12,9 @@ export class CycleService {
     return this.http.get(this.API_URL + "findAllCycle" )
   }
 
+  public getById(id:any) {
+    return this.http.get(this.API_URL + "findCycle/"+id )
+  }
+
   
 }

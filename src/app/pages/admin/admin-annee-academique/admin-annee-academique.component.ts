@@ -36,8 +36,6 @@ export class AdminAnneeAcademiqueComponent implements OnInit{
     this.anneeService.save(this.dataForm.value).subscribe()
     window.location.reload();
     this.loadData()
-
-
   }
 
   
