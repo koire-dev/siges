@@ -1,0 +1,207 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+  
+    <!--  Layout Primary  -->
+    <div id="layoutDrawer">
+      <!--  Sidebar Container -->
+      <app-teacher-sidebar></app-teacher-sidebar>
+  
+      <!--
+          =============================================
+          Main section layout
+          ==============================================
+      -->
+      <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+          <!-- Page header-->
+          <header class="bg-primary" >
+            <div class="container-xl px-5"><h1 class="text-white py-3 mb-0 display-6">Gestion des notes </h1></div>
+          </header>
+
+          <div class="row g-0">
+            <div class="col-lg-12 col-md-12">
+              <div class="card-body p-5">
+  
+                 <!-- Main content -->
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title"></h3>
+                                        <button class="btn btn-success col-1" style="margin-left: 91%;" data-toggle="modal" data-target="#exampleModal">Ajouter</button>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Matricule</th>
+                                                    <th>Nom(s) & prenom(s)</th>
+                                                    <th>Sequence 1</th>
+                                                    <th>Sequence 2</th>
+                                                    <th>Sequence 3</th>
+                                                    <th>Sequence 4</th>
+                                                    <th>Sequence 5</th>
+                                                    <th>Sequence 6</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>17Y196P</td>
+                                                    <td>Koiranga Alioum</td>
+                                                    <td>12</td>
+                                                    <td>13</td>
+                                                    <td>15</td>
+                                                    <td>11</td>
+                                                    <td>14</td>
+                                                    <td>19</td>
+                                                    <td>
+                                                        <button class="btn btn-warning" ><i class="fa fa-edit"></i></button>
+                                                        <button class="btn btn-danger ml-2" ><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17Y194P</td>
+                                                    <td>Abdel Aziz Abbo</td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>12</td>
+                                                    <td>13</td>
+                                                    <td>14</td>
+                                                    <td>15</td>
+                                                    <td>
+                                                        <button class="btn btn-warning" ><i class="fa fa-edit"></i></button>
+                                                        <button class="btn btn-danger ml-2" ><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17Y192P</td>
+                                                    <td>Dompet Issa Manel</td>
+                                                    <td>14</td>
+                                                    <td>13</td>
+                                                    <td>17</td>
+                                                    <td>16</td>
+                                                    <td>10</td>
+                                                    <td>15</td>
+                                                    <td>
+                                                        <button class="btn btn-warning" ><i class="fa fa-edit"></i></button>
+                                                        <button class="btn btn-danger ml-2" ><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17Y190P</td>
+                                                    <td>Jiogho Jeff</td>
+                                                    <td>12</td>
+                                                    <td>13</td>
+                                                    <td>15</td>
+                                                    <td>11</td>
+                                                    <td>14</td>
+                                                    <td>19</td>
+                                                    <td>
+                                                        <button class="btn btn-warning" ><i class="fa fa-edit"></i></button>
+                                                        <button class="btn btn-danger ml-2" ><i class="fa fa-trash"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <!--<tfoot>
+                                                <tr>
+                                                    <th>N</th>
+                                                    <th>Nom(s) & prenom(s)</th>
+                                                    <th>Classe</th>
+                                                    <th>Matiere</th>
+                                                    <th>Date</th>
+                                                    <th>Perdiode</th>
+                                                    <th>Statut</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </tfoot>-->
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                
+                
+                    <!-- /.container-fluid -->
+                </section>
+
+                <!-- Modal form -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Formulaire d'ajout</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                    <label for="matricule">Matricule</label>
+                                    <select name="" class="form-control" id="">
+                                        <option value="">17Y196P</option>
+                                        <option value="">17Y190P</option>
+                                        <option value="">17Y192P</option>
+                                        <option value="">17Y194P</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" id="matricule" placeholder="Entrer le matricule"> -->
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="matiere">Matiere</label>
+                                    <select name="" class="form-control" id="">
+                                        <option value="">Mathematiques</option>
+                                        <option value="">Physique</option>
+                                        <option value="">Chimie</option>
+                                        <option value="">Informatique</option>
+                                        <option value="">Litterature</option>
+                                        <option value="">Philosophie</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" id="matiere" placeholder="Matiere"> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="note">note</label>
+                                        <input type="number" class="form-control" id="note" placeholder="Note">
+                                    </div>
+                                    <!-- <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div> -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                        <button type="button" class="btn btn-primary">Enregistrer</button>
+                                    </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+             
+              </div>
+  
+            </div>
+        
+
+          </div>
+      
+        </main>
+  
+        <!-- Footer content-->
+        <app-footer></app-footer>
+      </div>
+    </div>
+  
+  </div>
+  

@@ -1,0 +1,50 @@
+[
+    {
+      "name": "ABENA",
+
+      "matricule": 17075200,
+      "classe": "6eme C"
+    },
+    {
+      "name": "FRANCOIS",
+
+      "matricule": 640679,
+      "classe": "6eme B"
+    },
+    {
+      "name": "German",
+    
+      "matricule": 357114,
+      "classe": "6eme B"
+    },
+    {
+      "name": "Canad",
+
+      "matricule": 9976140,
+      "classe": "6eme B"
+    },
+    {
+      "name": "Vienam",
+  
+      "matricule": 331212,
+      "classe":"6eme A"
+    },
+    {
+      "name": "Meico",
+
+      "matricule": 1964375,
+      "classe": "6eme A"
+    },
+    {
+      "name": "Unies",
+   
+      "matricule": 9629091,
+      "classe": "6eme A"
+    },
+    {
+      "name": "Indi",
+    
+      "matricule": 3287263,
+      "classe": "6eme A"
+    }
+]

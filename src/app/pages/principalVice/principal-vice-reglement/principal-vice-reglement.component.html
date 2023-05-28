@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+        
+    <!--  Layout Primary  -->
+        <div id="layoutDrawer">
+            <!--  Sidebar Container -->
+            <app-principal-vice-sidebar></app-principal-vice-sidebar> 
+    
+                <div id="layoutDrawer_content">
+                    <main>
+                          <!-- Content Header (Page header) -->
+                          <section class="content-header">
+                            <div class="container-fluid">
+                              <div class="row mb-2">
+                                <div class="col-sm-6">
+                                  <h1><a class="text.primary"><i class="fas fa-home"></i> Règlement interieur</a></h1>
+                                </div>
+                                <div class="col-sm-6">
+                                  <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"></li>
+                                    <li class="breadcrumb-item" ><a href="principalVice/infoEtablissement" style="color : #6c757d ;"> <i class="fas fa-edit"></i> Mon etablissement</a></li>
+                                    <li class="breadcrumb-item"><a href="principalVice/Apropos" style="color : #6c757d ;"> <i class="fas fa-cog"></i> salles</a></li>
+                                    <li class="breadcrumb-item active"> <a href="princpal/sanction" style="color : #6c757d ;"> <i class="fas fa-cog"></i> Sanctions</a></li>
+                                  </ol>
+                                </div>
+                              </div>
+                            </div><!-- /.container-fluid -->
+                          </section>
+                      
+                          <!-- Main content -->
+                          <section class="content">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card card-outline card-info">
+                                  <!-- /.card-header -->
+                                  <div class="card-body">
+                                    <textarea id="summernote" name="reglement">
+                                      Nous vous recommandons de rédiger directement le èeglement intérieur<b> sans toutefois se soucier de l'entête car elle a dejà été prise en compte </b> <br> <i>exemple :</i> <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Il est strictement interdit de faire du vandalisme...</strong>
+                                    </textarea>
+                                  </div>
+                                  <div class="card-footer">
+                                    <a href="principalVice/preprint" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
+                                      <i class="fas fa-save"></i> Enregistrer
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- /.col-->
+                            </div>
+                            <!-- ./row -->
+                          </section>
+                    </main>
+                </div>
+        </div>
+       <app-footer></app-footer> 
+    </div>
+      

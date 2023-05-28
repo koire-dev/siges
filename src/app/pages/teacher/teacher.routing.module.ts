@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
-import { TeacherStudynotesSequenceComponent} from './teacher-studynotes-sequence/teacher-studynotes-sequence.component';
-import { TeacherStudynotesTrimestreComponent} from './teacher-studynotes-trimestre/teacher-studynotes-trimestre.component';
-import { Studynotes02Component } from './studynote/studynotes02/studynotes02.component';
+import { TeacherMakeAppelComponent } from './teacher-make-appel/teacher-make-appel.component';
+import { TeacherListAppelComponent } from './teacher-list-appel/teacher-list-appel.component';
+import { TeacherTextbookComponent } from './teacher-textbook/teacher-textbook.component';
+import { TeacherNotesComponent } from './teacher-notes/teacher-notes.component';
 
 export const routesTeacher: Routes = [
   {
@@ -11,16 +12,20 @@ export const routesTeacher: Routes = [
     component : TeacherDashboardComponent
   },
   {
-    path:"bulletin_sequence",
-    component : TeacherStudynotesSequenceComponent
+    path:"make_appel",
+    component : TeacherMakeAppelComponent
   },
   {
-    path:"bulletin02",
-    component : Studynotes02Component
+    path:"list_appel",
+    component : TeacherListAppelComponent
   },
   {
-    path:"bulletin01",
-    component : TeacherStudynotesTrimestreComponent
+    path:"textbook",
+    component : TeacherTextbookComponent
+  },
+  {
+    path:"list_notes",
+    component : TeacherNotesComponent
   }
 ];
 
