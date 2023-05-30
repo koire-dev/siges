@@ -1,193 +1,126 @@
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="" class="brand-link">
-        <!-- <img src="../../../../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-        <span class="brand-text font-weight-light">SIGES</span>
-    </a>
+<!--
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="../../../../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">Dompet Issa</a>
-            </div>
+    ==============================================
+    Sidebar  navigation layout
+    ==============================================
+-->
+<div id="layoutDrawer_nav">
+    <!-- Drawer navigation-->
+    <nav class="drawer accordion drawer-light bg-light"  id="drawerAccordion">
+      <div class="drawer-menu">
+        <div class="nav">
+   
+          <!-- Divider-->
+          <div class="drawer-menu-divider d-sm-none"></div>
+          <!-- Drawer section heading (Interface)-->
+          <div class="drawer-menu-heading font-weight-bold small text-primary">Que souhaitez vous faire ?</div>
+          <!-- Drawer link (Overview)-->
+          <a class="nav-link mdc-ripple-upgraded" href="principalVice/dashboard">
+            <div class="nav-link-icon"><i class="fas fa-columns"></i></div>
+            Tableau de bord
+          </a>
+          <a class="nav-link mdc-ripple-upgraded" href="principalVice/academic">
+            <div class="nav-link-icon"><i class="fas fa-unlock" aria-hidden="true"></i></div>
+            Annee Academique
+          </a>
+          <!-- Drawer link (A propos)-->
+          <a class="nav-link collapsed mdc-ripple-upgraded"  data-bs-toggle="collapse" data-bs-target="#collapseApropos" aria-expanded="false" aria-controls="collapseLayouts">
+            <div class="nav-link-icon"><i class="fas fa-home"></i></div>
+            À propos
+            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+          </a>
+          <!-- Nested drawer nav (Dashboards)-->
+          <div class="collapse" id="collapseApropos" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+            <nav class="drawer-menu-nested nav">
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/infoEtablissement">
+                    <div class="nav-link-icon"><i class="fas fa-home" aria-hidden="true"></i></div>
+                    Mon etablissement
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/Apropos">
+                    <div class="nav-link-icon"><i class="fas fa-cog" aria-hidden="true"></i></div>
+                    Gestion des salles
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/sanction">
+                    <div class="nav-link-icon"><i class="fas fa-cog" aria-hidden="true"></i></div>
+                    Gestion des sanction
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/reglement">
+                    <div class="nav-link-icon"><i class="fas fa-edit" aria-hidden="true"></i></div>
+                    Reglement Interieur
+                </a>
+              <!-- <a class="nav-link mdc-ripple-upgraded"  routerLink="/econome/fraisdossier">Frais de dossier</a>
+              <a class="nav-link mdc-ripple-upgraded"  routerLink="/econome/fraisapee">Frais de l'APEE</a> -->
+   
+            </nav>
+          </div>
+          <!-- Drawer link (Calendar)-->
+          <a class="nav-link collapsed mdc-ripple-upgraded" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCalendar" aria-expanded="false" aria-controls="collapseLayouts">
+            <div class="nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
+            Calendrier Academique
+            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+          </a>
+          <!-- Nested drawer nav (Layouts)-->
+          <div class="collapse" id="collapseCalendar" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+            <nav class="drawer-menu-nested nav">
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/calendar">
+                    <div class="nav-link-icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div>
+                    Consulter le calendrier
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+                    <div class="nav-link-icon"><i class="fas fa-history" aria-hidden="true"></i></div>
+                    Emploi de temps
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/addEvent">
+                    <div class="nav-link-icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+                    Programmer un évènement
+                </a>
+            </nav>
+          </div>
+          <!-- Drawer link (Dssier Academique)-->
+          <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+            <div class="nav-link-icon"><i class="fas fa-folder-open" aria-hidden="true"></i></div>
+            Dossier Academique
+        </a>
+        <!-- Drawer link (Gestion cours)-->
+        <a class="nav-link collapsed mdc-ripple-upgraded" data-bs-toggle="collapse" data-bs-target="#collapseCours" aria-expanded="false" aria-controls="collapseLayouts">
+            <div class="nav-link-icon"><i class="fa fa-fw fa-wrench"></i></div>
+            Gestion des cours
+            <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
+          </a>
+          <!-- Nested drawer nav (Layouts)-->
+          <div class="collapse" id="collapseCours" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
+            <nav class="drawer-menu-nested nav">
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/matiere">
+                    <div class="nav-link-icon"><i class="fas fa-plus-circle" aria-hidden="true"></i></div>
+                    Ajouter une matiere
+                </a>
+                <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+                    <div class="nav-link-icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
+                    Etat d'avancement des cours
+                </a>
+            </nav>
+          </div>
+           
+           
+            <a class="nav-link mdc-ripple-upgraded" href="principalVice/bulletin">
+                <div class="nav-link-icon"><i class="far fa-newspaper fa-float" aria-hidden="true"></i></div>
+              Gestion des bulletins
+            </a>
+            
+      
+   
         </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                    </button>
-                </div>
-            </div>
+      </div>
+   
+      <!-- Drawer footer        -->
+      <div class="drawer-footer border-top">
+        <div class="d-flex align-items-center">
+          <i class="material-icons text-muted">account_circle</i>
+          <div class="ms-3">
+            <div class="caption">Menu principalVice</div>
+          </div>
         </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-                <li class="nav-item">
-                    <a href="" class="nav-link active">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Tableau de bord
-
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Permission
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Demande permission</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste permission</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Absence
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Enregistrer absence</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Justifier absence</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste absence</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Etat avancement des cours
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>?.......</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Matériel Pédagogique
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Allouer materiel</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Consulter liste materiel</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Demande approvisionnement</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon  fa fa-user"></i>
-                        <p>
-                            Profil
-
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon fa fa-solid fa-lock"></i>
-                        <p>
-                            Bloquer ecran
-
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p>Documentation</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link ">
-
-                        <i class="nav-icon fa fa-solid fa-right-from-bracket"></i>
-                        <p>
-                            Déconnexion
-
-                        </p>
-                    </a>
-                </li>
-               
-                
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-</aside>
+      </div>
+    </nav>
+   </div>
+   

@@ -1,0 +1,230 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+      
+    <!--  Layout Primary  -->
+    <div id="layoutDrawer">
+      <!--  Sidebar Container -->
+      <app-principal-sidebar></app-principal-sidebar> 
+  
+      <div id="layoutDrawer_content">
+          <main>
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid">
+                  <div class="row mb-2">
+                    
+                      <div class="col-sm-6">
+                        <h1><a class="text.primary"><i class="fas fa-home"></i> Gestion des évènements</a></h1>
+                      </div><!-- /.col -->
+                      <div class="col-sm-6">
+                          <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"></li>
+                            <li class="breadcrumb-item" ><a href="principal/calendar" style="color : #6c757d ;"> <i class="fas fa-calendar-alt"></i> Calendrier</a></li>
+                            <li class="breadcrumb-item active"> <a href="princpal/" style="color : #6c757d ;"> <i class="fas fa-history"></i> Emploi de temps</a></li>
+                          </ol>
+                      </div><!-- /.col -->
+                  </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+          <!-- /.content-header -->
+  
+          <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card card-primary">
+                          <div class="card-header">
+                                    <i class="fas fa-edit"></i>
+                                    Ajouter un évènement
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                          </div>
+                          <div class="card-body">
+                            <form action="" method="post">
+                              <div class="row">
+                                <div class="col-6">
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Annee academique</label>
+                                      <select class="form-control" name="anneeadd">
+                                      <option value="2022/2023">2022/2023</option>
+                                      </select>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">nom evenement</label>
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="eventadd" value="">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Type evenement</label>
+                                      <select class="form-control" name="typeadd">
+  
+                                        <option value="examen">examen</option>
+                                        <option value="journée porte ouverte">journée porte ouverte</option>
+                                        <option value="rentrée academique">rentrée academique</option>
+                                        <option value="seminaire">seminaire</option>
+                                        <option value="vacances">vacances</option>
+                                        <option value="visite officielle">visite officielle</option>
+                                        <option value="activité culturelle">activité culturelle</option>
+                                        <option value="autres">autres</option>
+                                      </select>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-group autocomplete">
+                                    <label for="exampleInputEmail1">lieu</label>
+                                    <input type="text" class="form-control" aria-describedby="emailHelp" name="lieuadd" value="">
+                                  </div>
+                                </div>
+                              </div> 
+                              <div class="row">
+                                <div class="col-6"> 
+                                  <div class="form-group">
+                                      <label for="exampleInputEmail1">Date de debut</label>
+                                      <input type="datetime-local" class="form-control" aria-describedby="emailHelp" name="datedebutadd" value="">
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Date de fin</label>
+                                      <input type="datetime-local" class="form-control" aria-describedby="emailHelp" name="datefinadd" value="">
+                                    </div>
+                                </div>
+                              </div>  
+                          <button type="submit" class="btn btn-success btne">Ajouter</button>
+                            </form>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                      </div>
+                      <div class="col-12">
+                        <!-- /.card -->
+            
+                        <div class="card">
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                              <thead>
+                              <tr>
+                                <th>Année academique</th>
+                                <th>Nom de l'evenement</th>
+                                <th>type</th>
+                                <th>Lieu</th>
+                                <th>date de debut</th>
+                                <th>date de fin</th>
+                                <th></th>
+                                <th>etat</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td>2021/2022</td>
+                                <td>20 mai</td>
+                                <td>fete</td>
+                                <td>place</td>
+                                <td>20-05-2020 10h00</td>
+                                <td>20-05-2020 15h00</td>
+                                <td>
+                                  <button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#collapseModifieSalle1" aria-expanded="false" aria-controls="collapseExample">
+                                      <i class="fas fa-edit"></i>
+                                      modifier
+                                    </button>
+                                    <div class="collapse" id="collapseModifieSalle1">
+                                      <div class="card card-body">
+                                        <form action="" method="post">
+                                          <div class="row">
+                                            <div class="col-6">
+                                              <div class="form-group">
+                                                  <label for="exampleInputEmail1">Annee</label>
+                                                  <select class="form-control" name="anneemodif">
+                                                  <option value="2022/2023">2022/2023</option>
+                                                  </select>
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                              <div class="form-group">
+                                                <label for="exampleInputEmail1">nom evenement</label>
+                                                <input type="text" class="form-control" aria-describedby="emailHelp" name="eventmodif" value="">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-6">
+                                              <div class="form-group">
+                                                  <label for="exampleInputEmail1">Type evenement</label>
+                                                  <select class="form-control" name="typemodif">
+                      
+                                                    <option value="examen">examen</option>
+                                                    <option value="journée porte ouverte">journée porte ouverte</option>
+                                                    <option value="rentrée academique">rentrée academique</option>
+                                                    <option value="seminaire">seminaire</option>
+                                                    <option value="vacances">vacances</option>
+                                                    <option value="visite officielle">visite officielle</option>
+                                                    <option value="activité culturelle">activité culturelle</option>
+                                                    <option value="autres">autres</option>
+                                                  </select>
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                              <div class="form-group autocomplete">
+                                                <label for="exampleInputEmail1">lieu</label>
+                                                <input type="text" class="form-control" aria-describedby="emailHelp" name="lieumodif" value="">
+                                              </div>
+                                            </div>
+                                          </div> 
+                                          <div class="row">
+                                            <div class="col-6"> 
+                                              <div class="form-group">
+                                                  <label for="exampleInputEmail1">Date de debut</label>
+                                                  <input type="datetime-local" class="form-control" aria-describedby="emailHelp" name="datedebutmodif" value="">
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                  <label for="exampleInputEmail1">Date de fin</label>
+                                                  <input type="datetime-local" class="form-control" aria-describedby="emailHelp" name="datefinmodif" value="">
+                                                </div>
+                                            </div>
+                                          </div>  
+                                      <button type="submit" class="btn btn-info btn-xs btne">modifier</button>
+                                        </form>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td>
+                                  <button type="submit" class="btn btn-danger btn-xs">
+                                    <i class="fas fa-lock"></i>
+                                    cloturer
+                                  </button>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                      </div>
+                      <!-- /.col -->
+                          
+                    </div>
+                    
+                </div><!-- /.container-fluid -->
+            </section>
+          </main>
+        <!-- /.content -->
+        </div>
+    </div>
+    <app-footer></app-footer> 
+   
+  </div>

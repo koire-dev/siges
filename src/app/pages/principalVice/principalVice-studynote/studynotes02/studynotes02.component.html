@@ -1,0 +1,655 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+
+        <!-- Profile Image -->
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile">
+            
+
+            <h3 class="profile-username text-center">ZILE NDJIBE MYLENA</h3>
+
+            
+            <ul class="list-group list-group-unbordered mb-3">
+              <li class="list-group-item">
+                <b>BULLETIN PREMIER SEQUENCE </b> <a class=" float-right btn btn-primary" (click)="open()"><i class="fa fa-download">download</i></a>
+            
+              </li>
+              <li class="list-group-item">
+                <b>BULLETIN PREMIER TRIMESTRE </b> <a class=" float-right btn btn-primary" (click)="openPDF()"><i class="fa fa-download">download</i></a>
+            
+              </li>
+             
+            </ul>
+
+            <a href="principalVice/dashboard" class="btn btn-primary btn-block"><b>back</b></a>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+        <!-- About Me Box -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">informations </h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <strong><i class="fas fa-book mr-1"></i> classe</strong>
+
+            <p class="text-muted">
+             Tle C
+            </p>
+
+            <hr>
+
+            <strong><i class="fas fa-map-marker-alt mr-1"></i> n</strong>
+
+            <p class="text-muted">Malibu, California</p>
+
+            <hr>
+
+            
+
+            
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header p-2">
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">PREMIER TRIMESTRE</a></li>
+              <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">DEUXIEME TRIMESTRE</a></li>
+              <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">TROISIEME TRIMESTRE</a></li>
+              <li class="nav-item"><a class="nav-link " href="#act" data-toggle="tab">PREMIERE SEQUENCE</a></li>
+            </ul>
+          </div><!-- /.card-header -->
+          <div class="card-body">
+            <div class="tab-content">
+              <div class="active tab-pane" id="activity">
+                <div class="wrapper" id="htmlData">
+    
+                  <section class="content-head ">
+                      <div class="container-fluid">
+                          <!-- /.entete -->
+                      <div class="header">
+                          <div class="row">
+                              <div class="col-8 entete">
+                                  <address>
+                                      <span>COLLEGE LA REFERENCE</span><br>
+                                      <span>fidelite-application reussite</span><br>
+                                      <span>BP 192 MRA</span><br>
+                                  </address>
+                              </div>
+                              <div class="col-4 entete">
+                                  <address>
+                                      <span>Année scolaire: 2022/2023</span><br>
+                                      <span>PREMIER TRIMESTRE</span><br>
+                                  </address>
+                              </div>
+                          </div>
+                          <div class="col-12 center">
+                             <h2>BULLETIN DE NOTES</h2>
+                          </div>
+                          <div class="row">
+                              <div class="col-5">
+                                  <span>NOMS ET PRENOMS: <b></b> </span><br>
+                                  <span>Né(e) le <b>22/02/2005</b> à <b> MAROUA</b></span><br>
+                                  <span>Matricule: <b>2107dp</b> </span><br>
+                              </div>
+                              <div class="col-5">
+                                  <span for="">classe: <b> PA4</b></span><br>
+                                  <span for="">Classe Redoubléé: <b>N</b> </span><br>
+                                  <span for="">Nombre d'élèves: <b>100</b> </span><br>
+                                  <span>TITULAIRE: <b>MR TEXA</b></span>
+                              </div>
+                              <div class="col-2">
+                                 <img src="data:image/jpeg;base64,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" alt=""> 
+                               
+                              </div>
+                          </div>
+              
+                      </div>
+                      <div class="body">
+                          <div class="col-12 table-responsive">
+                              <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                  <th>DISCIPLINE</th>
+                                  <th>SEQ 1</th>
+                                  <th>SEQ 2</th>
+                                  <th>MOY/20</th>
+                                  <th>COEFF</th>
+                                  <th>MOY x</th>
+                                  <th>Rang</th>
+                                  <th>Appréciations</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                 
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                                <tr>
+                                  <td>ANGLAIS</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                  <td>18</td>
+                                 
+                                  <td>3</td>
+                                  <td>54</td>
+                                  <td>1er</td>
+                                  <td>PASSABLE</td>
+                                </tr>
+                             
+                                
+                                  <tr>
+                                      <td>ANGLAIS</td>
+                                      <td>18</td>
+                                      <td>18</td>
+                                      <td>18</td>
+                                      <td>3</td>
+                                    
+                                      <td>54</td>
+                                      <td>1er</td>
+                                      <td>PASSABLE</td>
+                                    </tr>
+                                    <tr>
+                                      <td>TOTAL</td>
+                                      <td colspan="3"></td>
+                                      
+                                      <td>20</td>
+                                      <td>420</td>
+                                    
+                                      <td colspan="3"></td>
+                                      
+                                    </tr>
+                                    <tr>
+                                      <td>MOYENNE</td>
+                                      <td colspan="">16.2/20</td>
+                                      
+                                      <td>RANG</td>
+                                      <td>420</td>
+                                    
+                                      <td >Retards</td>
+                                      <td >0</td>
+                                      <td>Absences</td>
+                                      <td>3</td>
+                                      
+                                    </tr>
+                                  
+                                    
+                                      
+                                  
+                                
+                                  
+                                    
+                                </tbody>
+                              </table>
+                                  <div class="row">
+                                      <div class="col-5">
+                                          <table class="table table-bordered">
+                                             
+                                                <tr>
+                                                  <td>Satisfaisant doit continuer</td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Peut mieux faire</td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Insuffisant</td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Risque de rédoubler</td>
+                                                  <td></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Risque d'exclusion</td>
+                                                  <td></td>
+                                                </tr>
+                                              </table>
+                                      </div>
+                                          <div class="col-2">
+              
+                                          </div>
+                                     <div class="col-5">
+                                      <table class="table table-bordered">
+                                          <tr>
+                                              <td>Félicitations</td>
+                                              <td></td>
+                                          </tr>
+                                         
+                                          <tr>
+                                            <td>Encouragements</td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td>Tableau d'honneur</td>
+                                              <td></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Avertissement</td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td>Blame</td>
+                                              <td></td>
+                                            </tr>
+                                        </table>
+                                     </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-5">
+                                          <label for="">OBSERVATIONS DU CONSEILS DES PROFESSEURS</label>
+                                          <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                      </div>
+                                      <div class="col-2"></div>
+                                      <div class="col-5">
+                                          <b>LE CHEF D'ETABLISSEMENT</b>
+                                      </div>
+                                  </div>
+                                     
+                                   
+                                    
+                                      
+                           
+                            </div>
+                      </div>
+              
+                      </div><!-- /.container-fluid -->
+                    </section>
+              </div>
+              </div>
+              <div class="tab-pane" id="timeline">
+             
+              </div>
+              <div class="tab-pane" id="settings">
+             
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="act">
+                
+                  <div class="wrapper" id="sequence">
+
+
+                    <!-- Main Sidebar Container -->
+                  
+
+                      <section class="content">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12">
+                              
+
+
+                              <!-- Main content -->
+                              <div class="invoice p-3 mb-3">
+                                <!-- title row -->
+                                <div class="row">
+                                  <div class="col-5 center">
+                                      <address>
+                                          COLLEGE BILINGUE DE LA REPUBLIQUE<br>
+                                          Phone: (804) 123-5432<br>
+                                          Email: info@almasaeedstudio.com
+                                        </address>
+                                  </div>
+                                  <div class="col-2">
+                                    <h4>
+                                      <i class="fas fa-globe"></i> 
+                                      
+                                    </h4>
+                                  </div>
+                                  <div class="col-5 center">
+                                      <address>
+                                          COLLEGE BILINGUE DE LA REPUBLIQUE<br>
+                                          Phone: (804) 123-5432<br>
+                                          Email: info@almasaeedstudio.com
+                                        </address>
+                                  </div>
+                                  <!-- /.col -->
+                                </div>
+                                <!-- info row -->
+                                <div class="row">
+                                  <div class="col-12 center">
+                                      <address>
+                                          <h2>BULLETIN DE NOTES</h2>
+                                              <i> PREMIER TRIMESTRE</i>
+                                      </address>
+                                  </div>
+                                </div>
+                                <div class="row invoice-info">
+                                  <div class="col-sm-6 invoice-col left">
+                                  
+                                      <b>NOMS ET PRENOMS: Invoice #007612</b><br>
+                                      <br>
+                                      <b>NE LE </b> 4F3S8J<br>
+                                      <b>A</b> 2/22/2014<br>
+                                      <b>MATRICULE:</b> 968-34567
+                                      <b>SEXE:</b> M
+                                  </div>
+                                  <!-- /.col -->
+                                  
+                                  <!-- /.col -->
+                                  <div class="col-sm-6 invoice-col right">
+                                    <b>CLASSE: </b><br>
+                                    <br>
+                                    <b>Effectif: 120</b> 4F3S8J<br>
+                                    <b>Prof Principal</b> 2/22/2014<br>
+                                    <b>Année scolaire:</b> 968-34567
+                                  </div>
+                                  <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+
+                                <!-- Table row -->
+                                <div class="row">
+                                  <div class="col-12 table-responsive">
+                                    <table class="table table-bordered">
+                                      <thead>
+                                      <tr>
+                                        <th>MATIERE</th>
+                                        <th>SEQUENCE</th>
+                                        <th>COEF</th>
+                                        <th>TOTAL</th>
+                                        <th>RANG</th>
+                                        <th>APPRECIATION</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td>ANGLAIS</td>
+                                        <td>18</td>
+                                        <td>3</td>
+                                        <td>54</td>
+                                        <td>5eme</td>
+                                        <td>PASSABLE</td>
+                                      </tr>
+                                      <tr>
+                                          <td>ANGLAIS</td>
+                                          <td>18</td>
+                                          <td>3</td>
+                                          <td>54</td>
+                                          <td>5eme</td>
+                                          <td>PASSABLE</td>
+                                        </tr>
+                                      
+                                          <tr>
+                                              <th colspan="2">TOTAL GROUPE 1</th>
+                                              <th>16</th>
+                                              <th>180</th>
+                                              <th>MOYENNE</th>
+                                              <th>11.50</th>
+                                              
+                                            </tr>
+                                          
+                              
+                                      <tr>
+                                          <td>ANGLAIS</td>
+                                          <td>18</td>
+                                          <td>3</td>
+                                          <td>54</td>
+                                          <td>5eme</td>
+                                          <td>PASSABLE</td>
+                                      </tr>
+                                        <tr>
+                                          <td>ANGLAIS</td>
+                                          <td>18</td>
+                                          <td>3</td>
+                                          <td>54</td>
+                                          <td>5eme</td>
+                                          <td>PASSABLE</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">TOTAL GROUPE 2</th>
+                                            <th>16</th>
+                                            <th>180</th>
+                                            <th>MOYENNE</th>
+                                            <th>11.50</th>
+                                            
+                                          </tr>
+                                          <tr>
+                                              <td>ANGLAIS</td>
+                                              <td>18</td>
+                                              <td>3</td>
+                                              <td>54</td>
+                                              <td>5eme</td>
+                                              <td>PASSABLE</td>
+                                          </tr>
+                                            <tr>
+                                              <td>ANGLAIS</td>
+                                              <td>18</td>
+                                              <td>3</td>
+                                              <td>54</td>
+                                              <td>5eme</td>
+                                              <td>PASSABLE</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">TOTAL GROUPE 2</th>
+                                                <th>16</th>
+                                                <th>180</th>
+                                                <th>MOYENNE </th>
+                                                <th>11.50</th>
+                                                
+                                          </tr>
+                                          <tr>
+                                              <th colspan="2">TOTAL</th>
+                                              <th>16</th>
+                                              <th>180</th>
+                                              <th>MOYENNE ELEVE: 11.50</th>
+                                              <th>RANG: 11eme /10</th>
+                                              
+                                          </tr>
+                                          <tr>
+                                            <td  colspan="2">
+                                            <table class="table">
+                                              <tr>
+                                                <th colspan="2" >PROFIL DE LA CLASSE</th>
+                                                
+                                              </tr>
+                                                <tr>
+                                                  <td>Forte moyenne:</td>
+                                                  <td>$250.30</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>faible moyenne</td>
+                                                  <td>$10.34</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>effectif total:</td>
+                                                  <td>$5.80</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>moyenne de la classe</td>
+                                                  <td>$265.24</td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                            <td  colspan="2">
+                                            <table class="table">
+                                              <tr>
+                                                <th colspan="2"  >DISCIPLINE</th>
+                                                
+                                              </tr>
+                                                <tr>
+                                                  <td >RETARD(en heures)</td>
+                                                  <td>$250.30</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>ABSENCES Justifiées</td>
+                                                  <td>$10.34</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>ABSENCES NON-Justifiées</th>
+                                                  <td>$5.80</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>RETENUES (en heures)</th>
+                                                  <td>$265.24</td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                            <td colspan="2">
+                                            <table class="table">
+                                                <tr >
+                                                  <th colspan="2"  >RESULTATS DE L'ELEVE</th>
+                                                  
+                                                </tr>
+                                                <tr>
+                                                  <td >total des points:</td>
+                                                  <td>$250.30</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Total des coéfficients</td>
+                                                  <td>$10.34</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>MOYENNE DE L'ELEVE</th>
+                                                  <td>$5.80</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>RANG DE L'ELEVE</th>
+                                                  <td>$265.24</td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                        </tr>
+                                          
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                  <!-- accepted payments column -->
+                                  <div class="col-12 center">
+                                    <strong>DECISIONS DES CONSEILS DE CLASSES ET DE DISCIPLINE</strong>
+
+                                  </div>
+                                  <div class="col-4 form ">
+                                    <input type="checkbox" name="" id="" class="form-group"><label for="">tableau d'honneur(TH)</label><br>
+                                    <input type="checkbox" name="" id=""><label for="">TH avec encouragements</label><br>
+                                    <input type="checkbox" name="" id=""><label for="">TH avec Félicitations</label><br>
+                                  </div>
+                                  <div class="col-4">
+                                    <input type="checkbox" name="" id=""><label for="">Avertissement Travail</label><br> 
+                                    <input type="checkbox" name="" id=""><label for="">Blame travail</label><br>
+                                    <input type="checkbox" name="" id=""><label for="">Exclu pour travail</label><br>
+                                  </div>
+                                  <div class="col-4">
+                                    <input type="checkbox" name="" id=""><label for="">Avertissment conduite</label><br>
+                                    <input type="checkbox" name="" id=""><label for="">Blame conduite</label><br>
+                                    <input type="checkbox" name="" id=""><label for="">Exclu pour conduite</label><br>
+                                  </div>
+                                  
+                                </div>
+                                <div class="row">
+                                  <div class="col-12">
+                                    <table class="table table-bordered">
+                                        <tr class="table table-dark">
+                                          <td>VISA DU PARENT</td>
+                                          <td>APPRECIATION GENERALE</td>
+                                          <td>VISA DU CHEF D'ETABLISSEMENT</td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="2"></td>
+                                          <td rowspan="2"></td>
+                                          <td rowspan="2">
+                                            <address>
+                                              yaoundé,..... <br>
+                                              <b>Le proviseur</b>
+                                            </address>
+                                          </td>
+                                        </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                              
+                              
+                              </div>
+                              <!-- /.invoice -->
+                            </div><!-- /.col -->
+                          </div><!-- /.row -->
+                        </div><!-- /.container-fluid -->
+                      </section>
+                      <!-- /.content -->
+                          <!-- /.<button class="btn btn-primary" value="Imprimer" onClick="window.print()" >Export To PDF</button>
+                    </div>-->
+                    
+                    
+
+
+                  </div>
+              </div>
+              
+            </div>
+            <!-- /.tab-content -->
+          </div><!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</section>

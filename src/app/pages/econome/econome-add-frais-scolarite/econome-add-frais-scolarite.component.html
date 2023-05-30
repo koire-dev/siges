@@ -23,31 +23,49 @@
           <div class="col-lg-5 col-md-6">
             <div class="card-body p-5">
 
-              <!-- Login submission form-->
-              <form class="mb-5" method="post">
-                <div class="mb-4">
-                  <div class="form-group">
-                    <label for="name">Matricule de l'eleve</label>
-                    <input type="text" name="name_event" class="form-control" id="name" aria-describedby="name" placeholder="Matricule">
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <div class="form-group">
-                    <label >Type de paiement</label>
-                    <select name="" class="form-control">
-                      <option value="">Selectionner un type de paiement</option>
-                      <option value="1ere Tranche"></option>
-                      <option value="2nd Tranche"></option>
-                      <option value="Tout"></option>
+              <!-- Frais scolarite form-->
+
+              <form class="mb-5"  (ngSubmit)="onSubmit()">
+  
+                <div class="mb-4">  
+                  <div class="form-group ">
+                    <label >Section ?</label>
+                    <select [(ngModel)] = "payment.section" name="section" required  class="form-control">
+                      <option value="">Selectionner une section</option>
+                      <option value="francophone">Francophone (FR)</option>
+                      <option value="anglophone">Anglophone (EN)</option>
                     </select>
                   </div>
                 </div>
-                <div class="mb-4">
+
+                <div class="mb-4">  
                   <div class="form-group ">
                     <label >Classe ?</label>
-                    <select name=""  class="form-control">
+                    <select [(ngModel)] = "payment.classe" name="classe" required class="form-control">
                       <option value="">Selectionner la classe requise</option>
-                      <option value="Extrascolaire"></option>
+                      <option value="6eme">6eme</option>
+                      <option value="5eme">5eme</option>
+                      <option value="4eme">4eme</option>
+                      <option value="3eme">3eme</option>
+                      <option value="2nd">2nd</option>
+                      <option value="1ere">1ere</option>
+                      <option value="Tle">Tle</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label for="name">Matricule de l'eleve</label>
+                    <input type="text" [(ngModel)] = "payment.matricule" name="matricule" required class="form-control" id="name" aria-describedby="name" placeholder="Matricule">
+                  </div>
+                </div>
+           
+                <div class="mb-4">
+                  <div class="form-group">
+                    <label >De quel type de paiement s'agit-il ?</label>
+                    <select [(ngModel)]="payment.dossierTranche" name="dossierTranche" required class="form-control">
+                      <option *ngFor="let tranche of tranches | async"> {{ tranche.label }} </option>
                     </select>
                   </div>
                 </div>
@@ -55,15 +73,48 @@
                 <div class="mb-4">
                   <div class="form-group">
                     <label for="date">Date et Heure </label>
-                    <input type="datetime-local" class="form-control" id="date"  placeholder="Date of event">
+                    <input type="datetime-local" class="form-control" required id="date"  [(ngModel)] = "payment.date_paiement" name="date_paiement">
                   </div>
                 </div>
 
-              </form>
-              <!-- Auth card message-->
-              <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                <a class="btn btn-primary mdc-ripple-upgraded" href="index.html">Enregistrer</a>
+              <div class="mb-4">
+                <div class="form-group">
+                  <label for="date">frais de l'examen</label>
+                  <select [(ngModel)] = "payment.frais_examen" required name="frais_examen" class="form-control">
+                    <option value="">Payer les frais de dossier de l'examen (15000 XAF) ?</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                  </select>
+                </div>
               </div>
+
+              <div class="mb-4">
+                <div class="form-group">
+                  <label for="date">frais de l'APEE </label>
+                  <select name="frais_apee" [(ngModel)] = "payment.frais_apee" required  class="form-control">
+                    <option value="">Payer les frais de dossier de l'APEE (5000 XAF)  ?</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <div class="form-group">
+                  <label for="date">Mode de paiement ?</label>
+                  <select [(ngModel)]="payment.dossierTranche" name="dossierTranche" required class="form-control">
+                    <option *ngFor="let tranche of tranches | async"> {{ tranche.type_paiement }}</option>
+                  </select>
+                </div>
+              </div>
+
+                <!-- Auth card message-->
+                <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                  <button  type="submit"  class="btn btn-primary mdc-ripple-upgraded "> Enregistrer </button>
+               </div>
+
+              </form>
+            
             </div>
 
           </div>
@@ -72,8 +123,8 @@
             <div class="card card-raised">
               <div class="card-body text-center p-5">
                 <img class="img-fluid mb-5" src="../../../../assets/img/images/college.webp" alt="image" style="max-width: 20rem">
-                <div class="display-6">Payer ses frais de scolarité est desormais chose facile.</div>
-                <p class="card-text">Grace SIGES, tout se fait en click !</p>
+                <div class="display-6">Payer ses frais de la scolarité est desormais chose facile.</div>
+                <p class="card-text">Grace SIGES, tout se fait en un click !</p>
               </div>
             </div>
           </div>

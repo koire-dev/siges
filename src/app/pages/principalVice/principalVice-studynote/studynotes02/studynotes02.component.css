@@ -1,0 +1,13 @@
+.center{text-align: center;
+    font-size: 13px;}
+.left{text-align: left;}
+.right{text-align: right;}
+img{
+    height: 100px;
+    width: 100px;
+}
+.entete{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

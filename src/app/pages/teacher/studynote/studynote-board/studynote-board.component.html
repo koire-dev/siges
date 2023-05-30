@@ -1,0 +1,83 @@
+<div class="wrapper">
+
+    
+    <!-- Main  header -->
+    <app-main-header></app-main-header> 
+    
+
+    <!-- Main Sidebar Container -->
+   <app-teacher-sidebar></app-teacher-sidebar> 
+        <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <h2 class="text-center display-4">BULLETIN DE NOTES</h2>
+            <form action="enhanced-results.html">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                      
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="m-3">
+  
+          <div class="wrap">
+            <div class="search">
+              <div class="form-group">
+                <label for="exampleSelectBorder">Classe</label>
+                <select   [(ngModel)]="term"
+                class="searchTerm custom-select form-control-border" id="exampleSelectBorder">
+                  <option></option>
+                  <option>6eme A</option>
+                  <option>6eme B</option>
+                
+                  <option>6eme C</option>
+                </select>
+              </div>
+             
+            </div>
+        
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">MATRICULE</th>
+                  <th scope="col">NOMS</th>
+                  <th scope="col">CLASSE</th>
+                  <th scope="col">ACTIONS</th>
+                </tr>
+              </thead>
+        
+              <tbody>
+                <tr *ngFor="let country of countries | filter: term">
+                  <td>
+                   
+                    {{ country.matricule | number }}
+                  </td>
+                  <td>{{ country.name  }}</td>
+                  <td>{{ country.classe  }}</td>
+                  <td>
+                 
+                    <a class="btn btn-primary btn-block" (click)="openPDF()"><i class="fa fa-download"></i></a>
+                  
+                    
+                  </td>
+                  <td  id="htmlData" >
+                   
+                      <app-teacher-studynotes-trimestre></app-teacher-studynotes-trimestre>
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </section>
+  </div>
+  
+   <app-footer></app-footer> 
+   
+  </div>
+
+ 

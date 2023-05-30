@@ -1,0 +1,150 @@
+<div class="wrapper">
+    <!-- Main  header -->
+    <app-main-header2></app-main-header2>
+        
+    <!--  Layout Primary  -->
+        <div id="layoutDrawer">
+            <!--  Sidebar Container -->
+            <app-principal-vice-sidebar></app-principal-vice-sidebar> 
+    
+                <div id="layoutDrawer_content">
+                    <main>
+                          <!-- Content Header (Page header) -->
+                          <div class="content-header">
+                            <div class="container-fluid">
+                                <div class="row mb-2">
+                                  
+                                    <div class="col-sm-6">
+                                      <h1><a class="text.primary"><i class="fas fa-home"></i> Gestion des matières</a></h1>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-6">
+                                        <ol class="breadcrumb float-sm-right">
+                                          <li class="breadcrumb-item"></li>
+                                          <li class="breadcrumb-item" ><a href="principalVice/" style="color : #6c757d ;"> <i class="fas fa-chart-line"></i> Etat d'avancement des cours</a></li>
+                                        </ol>
+                                    </div><!-- /.col -->
+                                </div><!-- /.row -->
+                            </div><!-- /.container-fluid -->
+                        </div>
+                        <!-- /.content-header -->
+                      
+                        <!-- Main content -->
+                        <section class="content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="card card-primary">
+                                      <div class="card-header">
+                                                <i class="fas fa-edit"></i>
+                                                Ajouter une matière
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                      </div>
+                                      <div class="card-body">
+                                        <form action="" method="post">
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">code de la matiere</label>
+                                            <input type="text" class="form-control" aria-describedby="emailHelp" name="code" value="">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">nom de la matiere</label>
+                                          <input type="text" class="form-control" aria-describedby="emailHelp" name="nom" value="">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="exampleInputEmail1">type de la matiere</label>
+                                          <input type="text" class="form-control" aria-describedby="emailHelp" name="type" value="">
+                                      </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">nombre de coeffiscient</label>
+                                            <input type="number" class="form-control" aria-describedby="emailHelp" name="coef" value="">
+                                        </div>
+                                      <button type="submit" class="btn btn-success btne">Ajouter</button>
+                                        </form>
+                                      </div>
+                                      <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                  </div>
+                                  <div class="col-12">
+                                    <!-- /.card -->
+                        
+                                    <div class="card">
+                                      <!-- /.card-header -->
+                                      <div class="card-body">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                          <thead>
+                                          <tr>
+                                            <th>code matiere</th>
+                                            <th>Nom de la matiere</th>
+                                            <th>type de la matiere</th>
+                                            <th>nombre de coeffiscient</th>
+                                            <th></th>
+                                            <th>etat</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                          <tr>
+                                            <td>ift 301</td>
+                                            <td>informatique</td>
+                                            <td>informatique fondamentale</td>
+                                            <td>02</td>
+                                            <td>
+                                              <button class="btn btn-info btn-xs" type="button" data-toggle="collapse" data-target="#collapseModifieSalle1" aria-expanded="false" aria-controls="collapseExample">
+                                                  <i class="fas fa-edit"></i>
+                                                  modifier
+                                                </button>
+                                                <div class="collapse" id="collapseModifieSalle1">
+                                                  <div class="card card-body">
+                                                    <form action="" method="post">
+                                                      <div class="form-group">
+                                                        <label for="exampleInputEmail1">code de la matiere</label>
+                                                        <input type="text" class="form-control" aria-describedby="emailHelp" name="codemodif" value="">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                      <label for="exampleInputEmail1">nom de la matiere</label>
+                                                      <input type="text" class="form-control" aria-describedby="emailHelp" name="nommodif" value="">
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label for="exampleInputEmail1">type de la matiere</label>
+                                                      <input type="text" class="form-control" aria-describedby="emailHelp" name="typemodif" value="">
+                                                  </div>
+                                                      <div class="form-group">
+                                                        <label for="exampleInputEmail1">nombre de coeffiscient</label>
+                                                        <input type="number" class="form-control" aria-describedby="emailHelp" name="coefmodif" value="">
+                                                    </div>
+                                                  <button type="submit" class="btn btn-info  btn-xs btne">modifier</button>
+                                                    </form>
+                                                  </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              <button type="submit" class="btn btn-danger btn-xs">
+                                                <i class="fas fa-trash"></i>
+                                                retirer
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                      <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                  </div>
+                                  <!-- /.col -->
+                                      
+                                </div>
+                                
+                            </div><!-- /.container-fluid -->
+                        </section>
+                        <!-- /.content -->
+                      </main>
+                </div>
+          </div>
+       <app-footer></app-footer> 
+    </div>
