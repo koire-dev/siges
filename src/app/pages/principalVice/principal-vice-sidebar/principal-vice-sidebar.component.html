@@ -15,11 +15,11 @@
           <!-- Drawer section heading (Interface)-->
           <div class="drawer-menu-heading font-weight-bold small text-primary">Que souhaitez vous faire ?</div>
           <!-- Drawer link (Overview)-->
-          <a class="nav-link mdc-ripple-upgraded" href="principalVice/dashboard">
+          <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/dashboard">
             <div class="nav-link-icon"><i class="fas fa-columns"></i></div>
             Tableau de bord
           </a>
-          <a class="nav-link mdc-ripple-upgraded" href="principalVice/academic">
+          <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/academic">
             <div class="nav-link-icon"><i class="fas fa-unlock" aria-hidden="true"></i></div>
             Annee Academique
           </a>
@@ -32,29 +32,29 @@
           <!-- Nested drawer nav (Dashboards)-->
           <div class="collapse" id="collapseApropos" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
             <nav class="drawer-menu-nested nav">
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/infoEtablissement">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/infoEtablissement">
                     <div class="nav-link-icon"><i class="fas fa-home" aria-hidden="true"></i></div>
                     Mon etablissement
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/Apropos">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/Apropos">
                     <div class="nav-link-icon"><i class="fas fa-cog" aria-hidden="true"></i></div>
                     Gestion des salles
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/sanction">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/sanction">
                     <div class="nav-link-icon"><i class="fas fa-cog" aria-hidden="true"></i></div>
                     Gestion des sanction
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/reglement">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/reglement">
                     <div class="nav-link-icon"><i class="fas fa-edit" aria-hidden="true"></i></div>
                     Reglement Interieur
                 </a>
-              <!-- <a class="nav-link mdc-ripple-upgraded"  routerLink="/econome/fraisdossier">Frais de dossier</a>
-              <a class="nav-link mdc-ripple-upgraded"  routerLink="/econome/fraisapee">Frais de l'APEE</a> -->
+              <!-- <a class="nav-link mdc-ripple-upgraded"  routerLink="//econome/fraisdossier">Frais de dossier</a>
+              <a class="nav-link mdc-ripple-upgraded"  routerLink="//econome/fraisapee">Frais de l'APEE</a> -->
    
             </nav>
           </div>
           <!-- Drawer link (Calendar)-->
-          <a class="nav-link collapsed mdc-ripple-upgraded" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCalendar" aria-expanded="false" aria-controls="collapseLayouts">
+          <a class="nav-link collapsed mdc-ripple-upgraded" routerLink="/#" data-bs-toggle="collapse" data-bs-target="#collapseCalendar" aria-expanded="false" aria-controls="collapseLayouts">
             <div class="nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
             Calendrier Academique
             <div class="drawer-collapse-arrow"><i class="material-icons">expand_more</i></div>
@@ -62,22 +62,22 @@
           <!-- Nested drawer nav (Layouts)-->
           <div class="collapse" id="collapseCalendar" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
             <nav class="drawer-menu-nested nav">
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/calendar">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/calendar">
                     <div class="nav-link-icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div>
                     Consulter le calendrier
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/">
                     <div class="nav-link-icon"><i class="fas fa-history" aria-hidden="true"></i></div>
                     Emploi de temps
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/addEvent">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/addEvent">
                     <div class="nav-link-icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
                     Programmer un évènement
                 </a>
             </nav>
           </div>
           <!-- Drawer link (Dssier Academique)-->
-          <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+          <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/">
             <div class="nav-link-icon"><i class="fas fa-folder-open" aria-hidden="true"></i></div>
             Dossier Academique
         </a>
@@ -90,11 +90,11 @@
           <!-- Nested drawer nav (Layouts)-->
           <div class="collapse" id="collapseCours" aria-labelledby="headingOne" data-bs-parent="#drawerAccordion">
             <nav class="drawer-menu-nested nav">
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/matiere">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/matiere">
                     <div class="nav-link-icon"><i class="fas fa-plus-circle" aria-hidden="true"></i></div>
                     Ajouter une matiere
                 </a>
-                <a class="nav-link mdc-ripple-upgraded" href="principalVice/">
+                <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/">
                     <div class="nav-link-icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
                     Etat d'avancement des cours
                 </a>
@@ -102,7 +102,7 @@
           </div>
            
            
-            <a class="nav-link mdc-ripple-upgraded" href="principalVice/bulletin">
+            <a class="nav-link mdc-ripple-upgraded" routerLink="/principalVice/bulletin">
                 <div class="nav-link-icon"><i class="far fa-newspaper fa-float" aria-hidden="true"></i></div>
               Gestion des bulletins
             </a>

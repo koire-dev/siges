@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import html2canvas from 'html2canvas';
+//import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
 @Component({
@@ -9,7 +9,7 @@ import jsPDF from 'jspdf';
 })
 export class TeacherStudynotesTrimestreComponent {
   public openPDF(): void {
-    let DATA: any = document.getElementById('htmlData');
+   /* let DATA: any = document.getElementById('htmlData');
     html2canvas(DATA).then((canvas) => {
       let fileWidth = 208;
       let fileHeight = (canvas.height * fileWidth) / canvas.width;
@@ -18,6 +18,6 @@ export class TeacherStudynotesTrimestreComponent {
       let position = 0;
       PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
       PDF.save('bulletin_de_notes.pdf');
-    });
+    });*/
   }
 }

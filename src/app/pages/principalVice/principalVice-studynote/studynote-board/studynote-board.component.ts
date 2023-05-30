@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+//import html2canvas from 'html2canvas';
 interface Country {
   name: string;
 
@@ -28,8 +28,8 @@ export class StudynoteBoardComponent implements OnInit {
       });
   }
   public openPDF(): void {
-    let DATA: any = document.getElementById('htmlData');
-    html2canvas(DATA).then((canvas) => {
+   /* let DATA: any = document.getElementById('htmlData');
+    html2canvas(DATA).then((canvas: { height: number; width: number; toDataURL: (arg0: string) => any; }) => {
       let fileWidth = 208;
       let fileHeight = (canvas.height * fileWidth) / canvas.width;
       const FILEURI = canvas.toDataURL('image/png');
@@ -38,6 +38,7 @@ export class StudynoteBoardComponent implements OnInit {
       PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
       PDF.save('bulletin_de_notes.pdf');
     });
+    */
   }
 }
 

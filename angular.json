@@ -26,7 +26,6 @@
             ],
             "styles": [
               "src/styles.css"
-     
             ],
             "scripts": []
           },
@@ -64,7 +63,8 @@
               "browserTarget": "siges-front:build:production"
             },
             "development": {
-              "browserTarget": "siges-front:build:development"
+              "browserTarget": "siges-front:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

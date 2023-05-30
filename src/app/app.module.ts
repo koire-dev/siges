@@ -92,6 +92,7 @@ import { PrincipalVicePreprintComponent } from './pages/principalVice/principal-
 import { PrincipalVicePrintComponent } from './pages/principalVice/principal-vice-print/principal-vice-print.component';
 import { PrincipalViceReglementComponent } from './pages/principalVice/principal-vice-reglement/principal-vice-reglement.component';
 import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal-vice-sanctions/principal-vice-sanctions.component';
+import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
 //end region*
 //principalVice
 
@@ -100,6 +101,7 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     AppComponent,
     DashboardComponent,
     MainHeaderComponent,
+    MainHeader2Component,
     FooterComponent,
     SgSidebarComponent,
     SgAskPermissionComponent,
@@ -181,6 +183,7 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     PrincipalVicePrintComponent,
     PrincipalViceReglementComponent,
     PrincipalViceSanctionsComponent,
+    FooterComponent
   
   ],
   imports: [
@@ -189,7 +192,6 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     RouterModule,
     HttpClientModule,
     FormsModule,
-    HttpClient,
     ReactiveFormsModule
   ],
   providers: [HttpClientModule],
