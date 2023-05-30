@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardComponent } from './pages/sg/dashboard/dashboard.component';
 import { MainHeaderComponent } from './pages/common/main-header/main-header.component';
@@ -39,7 +38,6 @@ import { SgMaterialInventoryComponent } from './pages/sg/sg-material-inventory/s
 import { LockScreenComponent } from './pages/common/lock-screen/lock-screen.component';
 // region Admin
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
-import { AdminEditAnneeAcademiqueComponent } from './pages/admin/admin-edit-annee-academique/admin-edit-annee-academique.component';
 
 import { AdminSidebarComponent } from './pages/admin/admin-sidebar/admin-sidebar.component';
 import { AdminAnneeAcademiqueComponent } from './pages/admin/admin-annee-academique/admin-annee-academique.component';
@@ -66,7 +64,6 @@ import { EconomeListFraisScolariteComponent } from './pages/econome/econome-list
 import { EconomeAddMaterielComponent } from './pages/econome/econome-add-materiel/econome-add-materiel.component';
 import { EconomeListMaterielComponent } from './pages/econome/econome-list-materiel/econome-list-materiel.component';
 //--common
-import { MainHeader2Component } from './pages/common/main-header2/main-header2.component';
 //end region
 
 //Principal
@@ -148,7 +145,6 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     LockScreenComponent,
 //  Admin
     AdminAnneeAcademiqueComponent,
-    AdminEditAnneeAcademiqueComponent,
     AdminCycleComponent,
     AdminFraisScolariteComponent,
     AdminMatiereComponent,
@@ -170,7 +166,7 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     EconomeListFraisScolariteComponent,
     EconomeAddMaterielComponent,
     EconomeListMaterielComponent,
-    MainHeader2Component,
+    //MainHeader2Component,
     //principalVice
     Studynotes02Component,
     StudynoteBoardComponent,
@@ -192,7 +188,9 @@ import { PrincipalViceSanctionsComponent } from './pages/principalVice/principal
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClient,
+    ReactiveFormsModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

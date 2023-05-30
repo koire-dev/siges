@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { ISerie } from 'src/app/interfaces/i-serie';
 import { SerieService } from 'src/app/services/serie/serie.service';
 
@@ -10,29 +9,11 @@ import { SerieService } from 'src/app/services/serie/serie.service';
 })
 export class AdminSerieComponent implements OnInit {
 
-  public series: any
-  dataForm = new FormGroup({
-    label: new FormControl(''),
-  });
-  constructor(private serieService: SerieService) { }
+  public series:ISerie[] = []
+  constructor(private serieService : SerieService){}
 
   ngOnInit(): void {
-
-    this.loadData()
-  }
-  loadData() {
-    this.serieService.getAll().subscribe((data) => {
-      this.series = data
-
-    })
-  }
-  save() {
-
-    this.serieService.save(this.dataForm.value).subscribe()
-    window.location.reload();
-    this.loadData()
-
-
+    this.series = this.serieService.getAll()
   }
 
 }

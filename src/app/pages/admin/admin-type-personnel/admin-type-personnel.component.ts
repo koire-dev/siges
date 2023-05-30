@@ -9,22 +9,12 @@ import { TypePersonnelService } from 'src/app/services/type-personnel/type-perso
 })
 export class AdminTypePersonnelComponent implements OnInit {
 
-  public personnels:any
+  public personnels:ITypePersonnel[] = []
   constructor(private typePersonnelService : TypePersonnelService){}
 
-  ngOnInit(): void {
-    this.typePersonnelService.getAll().subscribe((data)=>{
-      this.personnels = data
-     
-    })
- 
- }
- save(){
-  let record  ={"label":"Principale"}
-
-  this.typePersonnelService.save(record).subscribe()
- 
-
-}
+  ngOnInit( ): void {
+    this.personnels= this.typePersonnelService.getAll()
+    console.log(this.personnels)
+  }
   
 }

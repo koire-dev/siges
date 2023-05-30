@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,FormGroup } from '@angular/forms';
 import { IFraisScolarite } from 'src/app/interfaces/i-frais-scolarite';
 import { FraisScolariteService } from 'src/app/services/frais-scolarite/frais-scolarite.service';
 
@@ -10,28 +9,12 @@ import { FraisScolariteService } from 'src/app/services/frais-scolarite/frais-sc
 })
 export class AdminFraisScolariteComponent  implements OnInit{
 
-  public paiements :any
-  dataForm = new FormGroup({
-    label: new FormControl(''),
-    montant: new FormControl(''),
-  });
+  public paiements :IFraisScolarite[] =[]
 
   constructor(private paiementService: FraisScolariteService){}
 
-  ngOnInit(): void {
-    this.loadData()
- 
- }
- loadData(){
-   this.paiementService.getAll().subscribe((data)=>{
-     this.paiements = data
+  public ngOnInit(): void {
+    this.paiements = this.paiementService.getAll();
     
-   })
- }
- save() {
-     
-   this.paiementService.save(this.dataForm.value).subscribe()
-   window.location.reload();
-   this.loadData()
- }
+  }
 }

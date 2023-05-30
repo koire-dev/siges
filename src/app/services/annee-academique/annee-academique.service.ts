@@ -1,24 +1,29 @@
 import { Injectable } from '@angular/core';
+import { IAnneeAcademique } from 'src/app/interfaces/i-annee-academique';
 
-
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class AnneeAcademiqueService {
 
-  constructor(private http: HttpClient) { }
-  readonly API_URL = "http://localhost:8080/"
-  public getAllYears() {
-    return this.http.get(this.API_URL + "findAllYears" )
-  }
+  constructor() { }
 
-  public updateStatus(_id:String, _status:String) {
-   // return this.http.get(this.API_URL + "findAllYears" )
-   return this.http.put(this.API_URL + "updateStatus/"+_id,_status)
+  public getAll():IAnneeAcademique[]{
+    return [
+      {
+        id:"11",
+        debut: 2022,
+        fin: 2023,
+        annee :"2022-2023",
+        statut :"inactive"
+      },
+      {
+        id:"12",
+        debut: 2023,
+        fin: 2024,
+        annee :"2023-2024",
+        statut:"active"
+      }
+    ]
   }
-  public  save(data:any){
-    return this.http.post(this.API_URL + "addYear",data )
-  }
-
 }

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IFraisScolarite } from 'src/app/interfaces/i-frais-scolarite';
 
@@ -7,14 +6,15 @@ import { IFraisScolarite } from 'src/app/interfaces/i-frais-scolarite';
 })
 export class FraisScolariteService {
 
-  constructor(private http: HttpClient) { }
-  readonly API_URL = "http://localhost:8080/"
+  constructor() { }
 
-  public getAll() {
-    return this.http.get(this.API_URL + "findAllSlices" )
-  }
-
-  public  save(data:any){
-    return this.http.post(this.API_URL + "addSlice",data )
+  public getAll():IFraisScolarite[]{
+    return [
+      {
+        id: "11",
+        tranche: 1,
+        montant:"12 000"
+      }
+    ]
   }
 }

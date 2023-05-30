@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ISerie } from 'src/app/interfaces/i-serie';
 
@@ -7,17 +6,13 @@ import { ISerie } from 'src/app/interfaces/i-serie';
 })
 export class SerieService {
 
-  constructor(private http: HttpClient) { }
-  readonly API_URL = "http://localhost:8080/"
-
-  public getAll() {
-    return this.http.get(this.API_URL + "findAllSeries" )
-  }
-
-  public  save(data:any){
-    return this.http.post(this.API_URL + "addSerie",data )
-  }
-  public getById(id:any) {
-    return this.http.get(this.API_URL + "findSerie/"+id )
+  constructor() { }
+  public getAll():ISerie[]{
+    return[
+      {
+        id:"11",
+        label :"C"
+      }
+    ]
   }
 }

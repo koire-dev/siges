@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>cycles </h1>
+                        <h1>cycle </h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -37,7 +37,10 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                
+                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal"
+                                    data-target="#new-record">
+                                    Nouveau cycle
+                                </button>
                                 <br>
                                 <br>
                                 <br>
@@ -45,20 +48,38 @@
                                     <thead>
                                         <tr>
                                             <th>N</th>
-                                            <th>Label</th>
+                                            <th>Labelle</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let cycle of cycles" id="{{cycle.id}}">
+                                        <tr *ngFor="let serie of series" id="{{serie.id}}">
                                             <td></td>
-                                            <td>{{cycle.label}}</td>
-                                            
+                                            <td>{{serie.label}}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Action</button>
+                                                    <button type="button"
+                                                        class="btn btn-default dropdown-toggle dropdown-icon"
+                                                        data-toggle="dropdown">
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a class="dropdown-item" href="#">Editer </a>
+                                                        <a class="dropdown-item" href="#">Supprimer</a>
+
+
+                                                    </div>
+                                                </div>
+
+
+                                            </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>N</th>
-                                            <th>Label</th>
+                                            <th>Labelle</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -91,7 +112,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="">Label *</label>
+                    <label for="">Labelle *</label>
                     <input type="text" name="" id="" class="form-control">
                 </div>
             </div>
@@ -115,7 +136,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="">Label *</label>
+                    <label for="">Labelle *</label>
                     <input type="text" name="" id="" class="form-control">
                 </div>
             </div>
